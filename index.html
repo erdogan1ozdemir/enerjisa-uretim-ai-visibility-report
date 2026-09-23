@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enerjisa Üretim AI Görünürlük Raporu · Eylül 2026</title>
+<meta name="description" content="ChatGPT, Gemini ve Google AI Overview'a sorulan 5 marka-nötr sektör sorusunun 2 - 21 Eylül 2026 koşularındaki 88 cevabının analizi: 57 şirketlik sıralama, Enerjisa Üretim / Enerjisa Enerji ayrışması, kaynak ekosistemi ve model karşılaştırması.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2325347B'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%230AA0DC' stroke-width='12'/%3E%3C/svg%3E">
+<style>
+
+/* ============ Inbound DS tokens ============ */
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Light.ttf') format('truetype');font-weight:300;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{
+  --coral:#0AA0DC; --coral-tint:#E0F4FC; --coral-deep:#0078A8; --coral-soft:#7FD4F4;
+  --teal:#25347B; --teal-soft:#2F43A0; --teal-deep:#141C4A; --mint:#E8F5E9;
+  --ink:#1B2552; --ink-2:#4A4A4A; --ink-3:#8A8A8A;
+  --line:#DDE3EC; --line-soft:#EEF1F6; --surface:#FFFFFF; --bg:#F6F8FB;
+  --red:#D32F2F; --red-wash:#FFCDD2; --green:#2E7D32; --green-wash:#C8E6C9;
+  --gold:#F5A623; --gray-bar:#4A4A4A;
+  --font-display:'Bricolage Grotesque','Calibri',system-ui,sans-serif;
+  --font-body:'Outfit','Calibri',system-ui,sans-serif;
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-pill:999px;
+  --shadow-card:0 2px 8px rgba(27,37,82,.08);
+  --shadow-hover:0 6px 20px rgba(27,37,82,.12);
+  --shadow-pop:0 12px 32px rgba(27,37,82,.16);
+  --ease:cubic-bezier(.2,.8,.2,1); --dur:200ms;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{font-family:var(--font-body);font-size:15.5px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:clip}
+::selection{background:var(--coral);color:#fff}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);letter-spacing:-.02em}
+a{color:var(--coral-deep)}
+img{vertical-align:middle}
+b,strong{font-weight:600}
+.num-b{font-family:var(--font-display);font-weight:700}
+.fav{width:18px;height:18px;border-radius:4px;object-fit:contain;flex:none;background:#fff;box-shadow:0 0 0 1px rgba(27,37,82,.08)}
+.fav.sm{width:15px;height:15px}
+#bar{position:fixed;top:0;left:0;height:3px;background:var(--coral);z-index:100;width:0}
+.accent-line{width:40px;height:4px;border-radius:99px;background:var(--coral);margin:0 0 12px}
+
+/* term tooltips */
+.term{border-bottom:1.5px dashed var(--coral);cursor:help;position:relative;white-space:nowrap;font-weight:500;color:var(--ink)}
+.term::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(calc(-50% + var(--tts,0px)));
+  width:min(300px,72vw);background:var(--teal);color:#fff;font-weight:400;font-size:12.5px;line-height:1.5;padding:10px 13px;
+  border-radius:var(--r-md);box-shadow:var(--shadow-pop);display:none;pointer-events:none;z-index:60;white-space:normal;text-align:left}
+.term::before{content:"";position:absolute;left:50%;bottom:calc(100% + 4px);transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--teal);display:none;z-index:60}
+.term:hover::before,.term:focus-visible::before,.term.open::before{display:block}
+.term:hover::after,.term:focus-visible::after,.term.open::after{display:block;animation:ttin .18s var(--ease)}
+@keyframes ttin{from{opacity:0;translate:0 4px}to{opacity:1;translate:0 0}}
+.q-open{border-bottom:2px solid var(--coral);cursor:pointer;font-weight:600;color:inherit;white-space:nowrap}
+.q-open:hover{color:var(--coral-deep)}
+.q-open::after{content:" ↗";font-size:.8em;color:var(--coral)}
+
+/* ============ hero (kompakt, teal gradient) ============ */
+.hero{color:#fff;position:relative;overflow:hidden;padding:0 0 42px;
+  background:
+    radial-gradient(900px 480px at 88% -14%,rgba(10,160,220,.30),transparent 58%),
+    radial-gradient(680px 420px at -8% 112%,rgba(70,201,63,.14),transparent 62%),
+    linear-gradient(140deg,var(--teal-deep) 0%,var(--teal) 52%,#2A3F96 100%)}
+.hero .ring{position:absolute;right:-150px;top:-150px;width:460px;height:460px;border:50px solid rgba(10,160,220,.13);border-radius:50%;pointer-events:none}
+.hero .glowline{position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(10,160,220,.55),transparent)}
+.hwrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.hero-top{display:flex;justify-content:flex-start;align-items:center;gap:10px 18px;padding:20px 0;flex-wrap:wrap}
+.hero-top .lt{padding-left:18px;border-left:1px solid rgba(255,255,255,.25)}
+@media(max-width:520px){.hero-top .lt{padding-left:0;border-left:none;flex-basis:100%}}
+.hero-top .lt{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
+.hero-top .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;width:auto;min-width:0;max-width:100%;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
+.hero-top .rt img{height:20px;width:auto;display:block}
+.hero h1{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.1;max-width:780px;margin-top:8px}
+.hero h1 .hl{color:var(--coral-soft)}
+.hero .lead{margin-top:14px;max-width:760px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;color:rgba(255,255,255,.92)}
+.hero .lead b{font-weight:600;color:#fff}
+.hero .term{color:#fff;border-color:var(--coral-soft)}
+.hero .lead .q-open{border-color:var(--coral);color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:28px;position:relative;z-index:2}
+.kpi{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);padding:16px 18px;color:var(--ink);text-align:center}
+.kpi .v{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,2.8vw,38px);line-height:1.05;color:var(--teal)}
+.kpi .v small{font-size:.5em;font-weight:600}
+.kpi.good .v{color:var(--green)}
+.kpi.bad .v{color:var(--red)}
+.kpi .k{font-size:12px;color:var(--ink-2);margin-top:5px;line-height:1.4}
+.kpi .tag{display:inline-block;margin-top:8px;font-size:10.5px;font-weight:600;padding:2.5px 11px;border-radius:var(--r-pill);background:var(--coral-tint);color:var(--coral-deep)}
+.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px;font-size:11.5px}
+.hero-meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);padding:4px 12px;border-radius:var(--r-pill);font-weight:500}
+.hero-meta .q-open{border-bottom:none;border-color:rgba(10,160,220,.6);background:rgba(10,160,220,.2)}
+
+/* ============ layout: sol ToC + içerik ============ */
+.layout{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:242px minmax(0,1fr);gap:26px;padding:26px 22px 90px;align-items:start}
+.sidenav{position:sticky;top:18px;align-self:start;max-height:calc(100vh - 36px);display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 12px;box-shadow:var(--shadow-card);z-index:5}
+.sidenav h4{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 10px;font-family:var(--font-body);font-weight:700}
+.toc-scroll{overflow-y:auto;min-height:0;display:flex;flex-direction:column;gap:1px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.toc-scroll::-webkit-scrollbar{width:5px}
+.toc-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.sidenav a{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:10px;color:var(--ink-2);font-size:13px;font-weight:500;text-decoration:none;transition:background var(--dur) var(--ease),color var(--dur) var(--ease)}
+.sidenav a:hover{background:var(--coral-tint);color:var(--coral-deep)}
+.sidenav a.active{background:var(--teal);color:#fff}
+.sidenav a.active .n{background:var(--coral);color:#fff}
+.sidenav a .n{width:22px;height:22px;border-radius:6px;background:var(--line-soft);color:var(--ink-3);font-size:10px;font-weight:800;font-family:var(--font-display);display:grid;place-items:center;flex:none}
+.sidenav .foot{margin-top:10px;padding:10px 8px 2px;border-top:1px solid var(--line-soft)}
+.sidenav .foot img{height:15px;opacity:.85}
+main{min-width:0;max-width:100%}
+
+/* mobil ToC: FAB + bottom sheet */
+.toc-fab{display:none;align-items:center;gap:7px;position:fixed;right:14px;bottom:16px;z-index:80;background:var(--teal);color:#fff;border:none;border-radius:var(--r-pill);padding:12px 18px;font-family:var(--font-body);font-size:13.5px;font-weight:700;box-shadow:var(--shadow-pop);cursor:pointer}
+.toc-sheet{display:none}
+.toc-sheet.open{display:block;position:fixed;inset:0;z-index:90}
+.toc-sheet__bg{position:absolute;inset:0;background:rgba(20,28,74,.55)}
+.toc-sheet__panel{position:absolute;left:0;right:0;bottom:0;max-height:80vh;overflow:auto;background:var(--surface);border-radius:18px 18px 0 0;padding:14px 14px 26px;box-shadow:var(--shadow-pop)}
+.toc-sheet__panel h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:6px 8px 10px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-body)}
+.toc-sheet__panel a{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;color:var(--ink-2);font-size:14.5px;font-weight:600;border-bottom:1px solid var(--line-soft);text-decoration:none}
+.toc-sheet__panel a .n{width:22px;height:22px;border-radius:6px;background:var(--line-soft);color:var(--ink-3);font-size:10px;font-weight:800;font-family:var(--font-display);display:grid;place-items:center;flex:none}
+.toc-close{border:none;background:var(--line-soft);width:30px;height:30px;border-radius:50%;font-size:1.1rem;color:var(--ink-2);cursor:pointer;line-height:1}
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr;padding:18px 14px 90px}
+  .sidenav{display:none}
+  .toc-fab{display:inline-flex}
+}
+
+/* ============ sections ============ */
+section{padding:34px 0 10px;scroll-margin-top:12px}
+.crumb{display:inline-flex;gap:7px;align-items:baseline;font-size:11.5px;color:var(--coral-deep);margin-bottom:10px;font-weight:600}
+.crumb .s{font-family:var(--font-display);font-weight:800;letter-spacing:.04em}
+h2{font-size:clamp(22px,2.3vw,30px);font-weight:700;line-height:1.16}
+.lede{font-size:15px;color:var(--ink-2);max-width:820px;margin-top:10px}
+.lede b,.lede .num-b{color:var(--ink)}
+p{color:var(--ink-2);margin:10px 0;max-width:820px}
+p b{color:var(--ink)}
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;align-items:start;margin-top:22px}
+.split.rev{grid-template-columns:1.15fr 1fr}
+.split>*{min-width:0}
+.split .txt p{max-width:none}
+@media(max-width:900px){.split,.split.rev{grid-template-columns:1fr;gap:16px}}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+
+.panel{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:20px 20px 16px;transition:box-shadow var(--dur) var(--ease)}
+.panel:hover{box-shadow:var(--shadow-hover)}
+.panel .ph{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.panel h3{font-size:16.5px;font-weight:700}
+.panel .pk{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.pnote{font-size:12.5px;color:var(--ink-2);margin-top:12px;border-top:1px solid var(--line-soft);padding-top:10px;max-width:none;line-height:1.55}
+.pnote b{color:var(--ink)}
+.scrolly{max-height:340px;overflow-y:auto;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
+.scrolly::-webkit-scrollbar{width:6px}
+.scrolly::-webkit-scrollbar-track{background:var(--line-soft);border-radius:99px}
+.scrolly::-webkit-scrollbar-thumb{background:var(--coral);border-radius:99px}
+.scrolly.tall{max-height:560px}
+
+.insight-list{list-style:none;margin-top:18px}
+.insight-list li{position:relative;padding:14px 4px 14px 28px;border-bottom:1px solid var(--line-soft);font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.insight-list li::before{content:"➔";position:absolute;left:0;top:15px;color:var(--coral);font-weight:600}
+.insight-list b{color:var(--ink);font-weight:600}
+
+/* öne çıkan bulgular - kompakt not ızgarası */
+.fnotes{columns:2;column-gap:16px;margin-top:20px}
+.fnote{break-inside:avoid;background:var(--surface);border-radius:var(--r-md);border:1px solid var(--line);box-shadow:var(--shadow-card);padding:14px 16px 15px;margin:0 0 16px}
+.fnote:hover{box-shadow:var(--shadow-hover)}
+.fnote .fc-num{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;margin-bottom:5px}
+.fnote h3{font-size:14.5px;font-weight:700;line-height:1.28;color:var(--ink);margin-bottom:6px}
+.fnote p{font-size:12.5px;line-height:1.55;color:var(--ink-2);margin:0}
+.fnote p b,.fnote p .num-b{color:var(--ink)}
+.fnote .term{white-space:nowrap}
+@media(max-width:760px){.fnotes{columns:1}}
+/* model görünürlük - gruplu yatay bar */
+#model-lines{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+.mbname{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:5px}
+.mbrow.you .mbname{color:var(--coral-deep);font-weight:700}
+.mbar{display:grid;grid-template-columns:74px 1fr 48px;align-items:center;gap:9px;padding:2px 0}
+.mbar .ml{font-size:11px;color:var(--ink-3);text-align:right}
+.mbar .mtrack{height:15px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.mbar .mfill{height:100%;border-radius:4px}
+.mbar .mv{font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--ink)}
+@media(max-width:520px){.mbar{grid-template-columns:60px 1fr 44px;gap:7px}.mbar .ml{font-size:10px}}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:20px}
+.tile{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:14px 12px;text-align:center}
+.tile .v{font-family:var(--font-display);font-weight:800;font-size:clamp(22px,2.2vw,28px);color:var(--teal)}
+.tile .k{font-size:11.5px;color:var(--ink-2);margin-top:4px;line-height:1.4}
+.tile.click{cursor:pointer}
+.tile.click:hover{box-shadow:var(--shadow-hover)}
+.tile.click .k u{text-decoration:none;border-bottom:1.5px dashed var(--coral);color:var(--coral-deep);font-weight:600}
+
+/* büyük sıralama tablosu */
+.rt{width:100%;border-collapse:collapse;font-size:13px;min-width:640px}
+.rt thead th{position:sticky;top:0;background:var(--surface);z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:9px 8px;border-bottom:1.5px solid var(--line)}
+.rt th.c,.rt td.c{text-align:center}
+.rt td{padding:7px 8px;border-bottom:1px solid var(--line-soft);color:var(--ink-2);white-space:nowrap}
+.rt tr.you td{background:var(--coral-tint)}
+.rt tr.you .bn{font-weight:700;color:var(--coral-deep)}
+.rt tr.dead td{opacity:.75}
+.rt .idx{font-family:var(--font-display);font-weight:700;color:var(--ink-3);font-size:11.5px;text-align:center}
+.rt .bn{display:flex;align-items:center;gap:8px;font-weight:500;color:var(--ink)}
+.rt .bar{width:130px}
+.rt .bt{height:14px;border-radius:4px;background:var(--line-soft);position:relative;overflow:hidden}
+.rt .bf{position:absolute;inset:0 auto 0 0;width:0;border-radius:4px;background:var(--gray-bar);transition:width .8s var(--ease)}
+.rt tr.you .bf{background:var(--coral)}
+.rt .num{font-family:var(--font-display);font-weight:600}
+.rt .dead-tag{font-size:9.5px;font-weight:700;color:var(--red);background:var(--red-wash);border-radius:99px;padding:1.5px 8px;margin-left:6px}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:10px}
+
+/* dumbbell */
+.drow{display:grid;grid-template-columns:24px 118px 1fr;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line-soft);font-size:13px}
+.drow:last-child{border-bottom:none}
+.drow .dn{color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.drow.you .dn{font-weight:700;color:var(--coral-deep)}
+.dtrack{position:relative;height:32px}
+.dline{position:absolute;top:50%;height:2px;background:var(--line);transform:translateY(-50%)}
+.dpt{position:absolute;top:50%;width:11px;height:11px;border-radius:50%;transform:translate(-50%,-50%);border:2.5px solid #fff;box-shadow:0 0 0 1px rgba(27,37,82,.12)}
+.dpt.a{background:var(--teal)}
+.dpt.b{background:var(--coral)}
+.dlab{position:absolute;top:-6px;font-family:var(--font-display);font-weight:600;font-size:10px;transform:translateX(-50%);color:var(--ink-3)}
+.dlab.lo{top:auto;bottom:-6px;color:var(--coral-deep)}
+.legend{display:flex;gap:16px;margin-top:12px;font-size:11.5px;color:var(--ink-2);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px;font-weight:500}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* sentiment */
+.sent-grid{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center}
+@media(max-width:700px){.sent-grid{grid-template-columns:1fr}}
+.donut{width:160px;height:160px;flex:none}
+.sbar{display:flex;height:26px;border-radius:99px;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(27,37,82,.06)}
+.theme-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.theme-chips span{font-size:12px;font-weight:600;padding:5px 13px;border-radius:var(--r-pill);background:var(--mint);color:var(--green)}
+.rankbars{display:flex;align-items:flex-end;gap:5px;height:90px;margin-top:8px}
+.rankbars .rb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px}
+.rankbars .rb i{width:100%;border-radius:4px 4px 0 0;background:var(--teal);display:block;min-height:2px}
+.rankbars .rb:first-child i{background:var(--coral)}
+.rankbars .rb b{font-size:10px;font-family:var(--font-display);color:var(--ink-3)}
+
+/* flow / chips / hm / quote / note (öncekiyle aynı) */
+.flow{display:flex;height:48px;border-radius:var(--r-md);overflow:hidden;margin-top:8px;box-shadow:inset 0 0 0 1px rgba(27,37,82,.06)}
+.flow div{min-width:3px}
+.flow-leg{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;margin-top:12px;font-size:12px;color:var(--ink-2)}
+.flow-leg span{display:flex;align-items:center;gap:7px}
+.flow-leg i{width:10px;height:10px;border-radius:3px;flex:none}
+.flow-leg b{font-family:var(--font-display);margin-left:auto}
+@media(max-width:640px){.flow-leg{grid-template-columns:1fr}}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;min-width:540px}
+.tbl.slim{min-width:0}
+.tbl th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 9px;border-bottom:1.5px solid var(--line);font-weight:600}
+.tbl th.c,.tbl td.c{text-align:center}
+.tbl td{padding:9px;border-bottom:1px solid var(--line-soft);vertical-align:middle;color:var(--ink-2)}
+.tbl td b{color:var(--ink)}
+.tbl .num{font-family:var(--font-display);font-weight:600;white-space:nowrap}
+#soru-tipi .tbl .num{white-space:normal}
+.tbl .zero{color:var(--red);font-weight:700;background:var(--red-wash);border-radius:6px;padding:2px 9px;display:inline-block;font-family:var(--font-display)}
+.tbl .pos{color:var(--green);font-weight:700;background:var(--green-wash);border-radius:6px;padding:2px 9px;display:inline-block;font-family:var(--font-display)}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:3px 9px 3px 4px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2);margin:2px 3px 2px 0;white-space:nowrap}
+.chip.you{background:var(--coral-tint);color:var(--coral-deep);font-weight:600}
+.chip .n{font-family:var(--font-display);font-weight:700}
+.hm{width:100%;border-collapse:collapse;font-size:13px}
+.hm th{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:8px 9px;border-bottom:1.5px solid var(--line);font-weight:600;position:sticky;top:0;background:var(--surface);z-index:2}
+.hm th.c{text-align:center}
+.hm td{padding:7px 9px;border-bottom:1px solid var(--line-soft);color:var(--ink-2)}
+.hm td.nm{display:flex;align-items:center;gap:8px}
+.hm .cv{font-family:var(--font-display);font-weight:600;font-size:12px;text-align:center;border-radius:6px;color:var(--teal)}
+.hm tr.you td.nm{font-weight:700;color:var(--coral-deep)}
+.quote{margin:26px 0 6px;position:relative;padding-left:22px;max-width:860px}
+.quote::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;border-radius:99px;background:var(--coral)}
+.quote blockquote{font-family:var(--font-display);font-size:clamp(15px,1.6vw,18px);font-weight:400;line-height:1.5;color:var(--ink)}
+.quote cite{display:block;margin-top:10px;font-size:12px;font-style:normal;color:var(--ink-3);line-height:1.6}
+.note{background:var(--coral-tint);border-radius:var(--r-lg);padding:16px 20px;margin-top:20px}
+.note .nt{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--coral-deep);font-weight:700;margin-bottom:5px}
+.note p{margin:0;max-width:none;color:var(--ink);font-size:14px}
+.note.mint{background:var(--mint)}
+.note.mint .nt{color:var(--green)}
+.mnotes{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-top:18px;background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:8px 22px}
+.mnotes div{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:13px;line-height:1.55;color:var(--ink-2)}
+.mnotes div:nth-last-child(-n+2){border-bottom:none}
+.mnotes .mi{font-family:var(--font-display);font-weight:800;font-size:12px;color:var(--coral);min-width:15px;padding-top:1px}
+.mnotes b{color:var(--ink)}
+@media(max-width:760px){.mnotes{grid-template-columns:1fr}.mnotes div:nth-last-child(2){border-bottom:1px solid var(--line-soft)}}
+.divider{border:none;border-top:1px solid var(--line);margin:30px 0 4px}
+
+/* metrik sözlüğü */
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px;margin-top:20px}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-card);padding:16px 18px;transition:box-shadow var(--dur) var(--ease)}
+.metric:hover{box-shadow:var(--shadow-hover)}
+.metric .mk{display:flex;align-items:center;gap:8px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.metric .mk svg{width:15px;height:15px;flex:none;color:var(--ink-3)}
+.metric .mv{font-family:var(--font-display);font-weight:800;font-size:29px;color:var(--teal);margin-top:8px;line-height:1.1}
+.metric .mv small{font-size:.42em;font-weight:600;color:var(--ink-3);letter-spacing:0}
+.metric .md{font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.55}
+.theme-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+@media(max-width:700px){.theme-cols{grid-template-columns:1fr}}
+.pnote a{font-weight:600}
+
+/* qmodal */
+.qmodal{position:fixed;inset:0;z-index:200;display:none;align-items:flex-start;justify-content:center;padding:4vh 16px}
+.qmodal.on{display:flex}
+.qmodal .backdrop{position:absolute;inset:0;background:rgba(20,28,74,.6);backdrop-filter:blur(3px)}
+.qbox{position:relative;background:#fff;border-radius:20px;box-shadow:var(--shadow-pop);width:min(880px,100%);max-height:88vh;display:flex;flex-direction:column;overflow:hidden}
+.qhead{padding:18px 22px 12px;border-bottom:1px solid var(--line-soft)}
+.qhead .row1{display:flex;align-items:center;gap:12px}
+.qhead h3{font-size:17px;font-weight:700;margin-right:auto}
+.qhead .ext{font-size:12px;font-weight:600;text-decoration:none;color:var(--coral-deep);white-space:nowrap}
+.qhead .x{all:unset;cursor:pointer;font-size:19px;line-height:1;color:var(--ink-3);padding:4px 8px;border-radius:8px}
+.qhead .x:hover{background:var(--line-soft);color:var(--ink)}
+.qtabs{display:flex;gap:6px;margin-top:11px;flex-wrap:wrap}
+.qtabs button{all:unset;cursor:pointer;font-size:12px;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2)}
+.qtabs button.on{background:var(--teal);color:#fff}
+.qbody{overflow:auto;padding:0;scrollbar-width:thin;scrollbar-color:var(--coral) var(--line-soft)}
+.qbody::-webkit-scrollbar{width:7px;height:7px}
+.qbody::-webkit-scrollbar-thumb{background:var(--coral);border-radius:99px}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 9px;border-radius:var(--r-pill);white-space:nowrap;display:inline-block}
+.pill.m{background:var(--mint);color:var(--green)}
+.pill.z{background:#E3F0FA;color:#1565C0}
+.pill.c{background:var(--line-soft);color:var(--ink-2)}
+.pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
+.pill.zero{background:var(--red-wash);color:var(--red);font-family:var(--font-display)}
+.pill.pos{background:var(--green-wash);color:var(--green);font-family:var(--font-display)}
+.qtbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:820px}
+.qtbl thead th{position:sticky;top:0;background:#fff;z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:11px;border-bottom:1.5px solid var(--line)}
+.qtbl th.c,.qtbl td.c{text-align:center}
+.qtbl td{padding:10px 11px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+.qtbl tbody tr:hover{background:var(--bg)}
+.qtbl .idx{font-family:var(--font-display);font-weight:700;color:var(--ink-3);font-size:11.5px;text-align:center}
+.qtbl .q{font-weight:600;color:var(--ink);line-height:1.4;min-width:220px}
+.qtbl .src{min-width:200px}
+@media(max-width:640px){.qmodal{padding:0}.qbox{max-height:100vh;border-radius:0;width:100%}.qtbl .src{white-space:nowrap}}
+
+footer{background:var(--teal);color:rgba(255,255,255,.82);padding:52px 0 40px;font-size:13.5px;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;right:-140px;bottom:-200px;width:400px;height:400px;border:44px solid rgba(10,160,220,.12);border-radius:50%}
+footer .hwrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;position:relative}
+@media(max-width:760px){footer .hwrap{grid-template-columns:1fr}}
+footer h4{font-family:var(--font-display);color:#fff;font-size:19px;margin-bottom:9px}
+footer .fine{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:18px;line-height:1.7}
+footer .gl{font-size:12px;line-height:1.85}
+footer .gl b{color:rgba(255,255,255,.95);font-weight:600}
+footer .wm{height:19px;width:auto;opacity:.9;margin-top:22px;display:block}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.rt .bf{transition:none}}
+/* Madde listeleri */
+ul.bl{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:6px;max-width:820px}
+ul.bl li{position:relative;padding-left:17px;line-height:1.55;color:var(--ink-2)}
+ul.bl li::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--coral)}
+ul.bl b,ul.bl .num-b{color:var(--ink)}
+.lede-ul{font-size:15px}
+.split .txt ul.bl{max-width:none;font-size:14.5px}
+.fnote ul.bl{gap:4px;margin-top:2px;font-size:12.5px}
+.fnote ul.bl li{padding-left:14px}
+.fnote ul.bl li::before{width:5px;height:5px;left:1px}
+.pnote ul.bl{gap:4px;margin-top:6px;max-width:none}
+.pnote ul.bl li{padding-left:14px}
+.pnote ul.bl li::before{width:5px;height:5px;left:1px;top:.62em}
+.note ul.bl{max-width:none;font-size:14px}
+.note ul.bl li{color:var(--ink)}
+.hero ul.bl{max-width:760px;margin-top:12px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;gap:7px}
+.hero ul.bl li{color:rgba(255,255,255,.92)}
+.hero ul.bl li::before{background:var(--coral-soft);top:.65em}
+.hero ul.bl b{font-weight:600;color:#fff}
+/* Temmuz-Eylül karşılaştırma */
+.cmp td.d{white-space:nowrap}
+.cmp td.m{font-weight:600;color:var(--ink)}
+.cmp .flat{color:var(--ink-3);font-weight:600;font-family:var(--font-display)}
+.trendwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+.trendwrap svg{min-width:520px;width:100%;height:auto;display:block}
+.trendwrap .hz{fill:transparent;cursor:crosshair}
+#tt{position:fixed;z-index:300;pointer-events:none;background:var(--teal);color:#fff;font-size:12px;line-height:1.55;padding:8px 11px;border-radius:10px;box-shadow:var(--shadow-pop);display:none;min-width:150px}
+#tt .tt-h{font-weight:700;margin-bottom:3px}
+#tt .tt-r{display:flex;align-items:center;gap:7px;justify-content:space-between}
+#tt .tt-r i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px}
+#tt b{font-family:var(--font-display)}
+
+/* Enerjisa uyarlamaları */
+.hero-top .brandpill{display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:7px 12px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.hero-top .brandpill img{height:22px;width:auto;display:block}
+.rt .grp-tag{font-size:9.5px;font-weight:700;color:var(--teal);background:#E6E9F5;border-radius:99px;padding:1.5px 8px;margin-left:6px}
+.rt .pub-tag{font-size:9.5px;font-weight:700;color:var(--ink-2);background:var(--line-soft);border-radius:99px;padding:1.5px 8px;margin-left:6px}
+.rt tr.grp td{background:#F1F3FA}
+.split3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+@media(max-width:900px){.split3{grid-template-columns:1fr}}
+.stack{display:flex;height:22px;border-radius:6px;overflow:hidden;background:var(--line-soft);margin-top:6px}
+.stack div{min-width:2px}
+.prow{padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.prow:last-child{border-bottom:none}
+.prow .ph2{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:13px}
+.prow .ph2 b{color:var(--ink)}
+.prow .ph2 span{font-family:var(--font-display);font-weight:700;font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.pos.u{background:var(--coral-tint);color:var(--coral-deep)}
+.tbl .zero,.tbl .pos{white-space:nowrap}
+.fact td.m{font-weight:600;color:var(--ink)}
+.u{color:var(--coral-deep)}
+a.lnk{color:var(--coral-deep);text-decoration:none;border-bottom:1px solid var(--coral-soft)}
+a.lnk:hover{border-bottom-color:var(--coral-deep)}
+@media print{#bar,.sidenav,.toc-fab,.toc-sheet,.qmodal{display:none!important}.layout{grid-template-columns:1fr}.reveal{opacity:1;transform:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="ring"></div><div class="glowline"></div>
+  <div class="hwrap">
+    <div class="hero-top">
+      <span class="brandpill"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim"></span>
+      <span class="rt">Eylül 2026 <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
+      <span class="lt">AI Görünürlük Raporu · Sektör Aramaları</span>
+    </div>
+    <h1>Enerjisa Üretim <span class="hl">AI görünürlük</span> raporu</h1>
+    <p class="lead">ChatGPT, Gemini ve Google AI Overview'a <span class="q-open" data-f="all">5 marka-nötr sektör sorusu</span> yöneltilmiş; 2 - 21 Eylül 2026 arasındaki koşularda dönen <b>88 cevabın tam metni</b> analiz edilmiştir.</p>
+    <ul class="bl"><li><b>Kapsam:</b> "en büyük özel elektrik üreticisi", yenilenebilir, rüzgar, güneş ve hidroelektrik sorularında hangi şirketlerin <span class="term" data-tip="Mention: şirketin AI cevabı metninde adıyla yer alması.">mention</span> edildiği, hangi sırada listelendiği ve hangi kaynakların okunduğu</li><li><b>Enerjisa Üretim adıyla:</b> 88 cevabın 61'inde (%69,3) yer almakta; 57 şirket içinde Akfen Yenilenebilir'in (%70,5) ardından 2. sıradadır</li><li><b>"Enerjisa" adı:</b> 79 cevapta (%89,8) geçmektedir; aradaki 18 cevapta modeller Enerjisa Üretim yerine Enerjisa Enerji'yi listelemektedir</li><li><b>Kaynak tarafı:</b> 680 citation'ın 10'u (%1,5) enerjisauretim.com.tr'ye gitmektedir</li></ul>
+    <div class="kpis">
+      <div class="kpi good">
+        <div class="v" data-count="69.3">0<small>%</small></div>
+        <div class="k">Enerjisa Üretim adıyla visibility</div>
+        <span class="tag">#2 · 57 şirket içinde · Akfen %70,5</span>
+      </div>
+      <div class="kpi">
+        <div class="v" data-count="89.8">0<small>%</small></div>
+        <div class="k">"Enerjisa" adının geçtiği cevaplar</div>
+        <span class="tag">18 cevapta yalnızca Enerjisa Enerji</span>
+      </div>
+      <div class="kpi">
+        <div class="v">2,7</div>
+        <div class="k">Avg. position · ChatGPT ve Gemini'de ortalama sıra</div>
+        <span class="tag">%67'si ilk iki sırada</span>
+      </div>
+      <div class="kpi bad">
+        <div class="v" data-count="1.5">0<small>%</small></div>
+        <div class="k">Citation payı · enerjisauretim.com.tr</div>
+        <span class="tag">680 citation'ın 10'u · 9 cevapta kaynak</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span>88 cevap metni · 2 - 21 Eyl 2026</span><span>3 model · ChatGPT + Gemini + AI Overview</span><span>57 şirket tespit edildi</span><span>680 citation · 127 domain</span><span class="q-open" data-f="all">Soru setini görüntüle</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ LAYOUT ============ -->
+<div class="layout">
+  <nav class="sidenav" id="sidenav">
+    <h4>İçindekiler</h4>
+    <div class="toc-scroll" id="tocLinks">
+      <a href="#bulgular"><span class="n">01</span> Öne çıkan bulgular</a>
+      <a href="#metod"><span class="n">02</span> Metodoloji</a>
+      <a href="#metrikler"><span class="n">03</span> Metrik sözlüğü</a>
+      <a href="#siralama"><span class="n">04</span> Şirket sıralaması</a>
+      <a href="#iki-enerjisa"><span class="n">05</span> Enerjisa Üretim & Enerjisa Enerji</a>
+      <a href="#sorular"><span class="n">06</span> Soru bazında görünüm</a>
+      <a href="#seyir"><span class="n">07</span> Haftalık seyir</a>
+      <a href="#kaynak"><span class="n">08</span> Mention & source visibility</a>
+      <a href="#anlati"><span class="n">09</span> Anlatı & sentiment</a>
+      <a href="#dagilim"><span class="n">10</span> Citation kaynakları</a>
+      <a href="#domain"><span class="n">11</span> enerjisauretim.com.tr</a>
+      <a href="#model"><span class="n">12</span> Model karşılaştırması</a>
+      <a href="#aio"><span class="n">13</span> Google AI Overview</a>
+      <a href="#notlar"><span class="n">14</span> Metodoloji notları</a>
+    </div>
+    <div class="foot"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim" style="height:14px"></div>
+  </nav>
+
+  <main>
+    <!-- 01 -->
+    <section id="bulgular">
+      <div class="crumb"><span class="s">01</span><span>|</span><span>Öne çıkan bulgular</span></div>
+      <div class="accent-line"></div>
+      <h2>Öne çıkan bulgular</h2>
+      <p class="lede">2 - 21 Eylül 2026 arasındaki koşularda üç modelden dönen 88 cevabın tam metni analiz edilmiştir: cevaplarda <b>57 elektrik üretim şirketi</b> tespit edilmiştir. Soruların hiçbirinde marka adı geçmemektedir; şirketlerin listeye girmesi tamamen modelin kendi tercihidir.</p>
+      <div class="fnotes reveal">
+        <article class="fnote">
+          <span class="fc-num">Bulgu 01</span>
+          <h3>Sektör sorularında üst sıralarda</h3>
+          <ul class="bl"><li>Enerjisa Üretim adıyla <span class="term" data-tip="Visibility (mention rate): şirketin, cevapların yüzde kaçında yer aldığı.">visibility</span>: <span class="num-b">%69,3</span> (57 şirket içinde 2. sıra)</li><li>Mention edildiğinde ortalama sıra <span class="num-b">2,7</span>; mention'ların %67'si ilk iki sıradadır</li><li>"En büyük özel elektrik üreticisi" sorusunda 17 cevabın <b>17</b>'sinde yer almakta, ENKA'nın ardından 2. sırada listelenmektedir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 02</span>
+          <h3>"Enerjisa" adı iki şirket arasında bölünüyor</h3>
+          <ul class="bl"><li>"Enerjisa" adı 79 cevapta geçmekte, <b>Enerjisa Üretim</b> adı 61 cevapta geçmektedir</li><li>Güneş sorusunda 16 Enerjisa mention'ının <span class="num-b">12</span>'si yalnızca Enerjisa Enerji'ye aittir</li><li>Yenilenebilir sorusunda bazı cevaplar rüzgar ve hidroelektrik portföyünü Enerjisa Enerji'ye bağlamaktadır</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 03</span>
+          <h3>ChatGPT'nin rüzgar cevaplarında yer almıyor</h3>
+          <ul class="bl"><li>Rüzgar sorusunda ChatGPT'nin 5 cevabının hiçbirinde Enerjisa Üretim geçmemektedir</li><li>Aynı soruda Gemini ve AI Overview 14 cevabın <b>14</b>'ünde Enerjisa Üretim'e yer vermektedir</li><li>ChatGPT rüzgar listesini şirketlerin kendi RES sayfalarından derlemektedir: rtenerji.com, akfenren.com.tr, polatenerji.com, demirer.com.tr</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 04</span>
+          <h3>Gemini ve AI Overview'da her cevapta</h3>
+          <ul class="bl"><li>Gemini ve AI Overview'daki 63 cevabın tamamında "Enerjisa" adı geçmektedir</li><li>Enerjisa Üretim adıyla: Gemini <span class="num-b">%87,5</span>, AI Overview <span class="num-b">%77,4</span>, ChatGPT <span class="num-b">%36,0</span></li><li>ChatGPT cevap başına ortalama 7,4 şirket listelerken Gemini 11,4 şirket listelemektedir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 05</span>
+          <h3>Kurulu güç verisi farklı dönemlerden aktarılıyor</h3>
+          <ul class="bl"><li>Toplam kurulu güç veren cevapların <span class="num-b">13</span>'ü 3.901 MWe değerini aktarmaktadır (MW100 sıralaması kaynaklı)</li><li>Sitedeki güncel <b>4.500+ MW</b> değeri 3 cevapta yer almaktadır</li><li>8 cevapta "beş rüzgar santrali" ifadesi geçmektedir; sitede 18 RES listelenmektedir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 06</span>
+          <h3>Kaynak tarafında sınırlı pay</h3>
+          <ul class="bl"><li>enerjisauretim.com.tr <span class="term" data-tip="Source visibility: modelin cevabı yazarken o şirkete ait sayfaları kaynak gösterme oranı.">source visibility</span>: <span class="num-b">%10,2</span> (9 cevap)</li><li>Aynı oran Polat Enerji'de %20,5, Aydem Yenilenebilir'de %17,0'dır</li><li>"En büyük özel üretici" ve yenilenebilir sorularında enerjisauretim.com.tr hiç kaynak gösterilmemektedir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 07</span>
+          <h3>Yatırım içerikleri kaynak katmanında öne çıkıyor</h3>
+          <ul class="bl"><li>680 citation'ın <span class="num-b">168</span>'i (%24,7) aracı kurum ve yatırım platformu içeriklerine gitmektedir</li><li>En çok kaynak gösterilen iki site: getmidas.com (44) ve a1capital.com.tr (35)</li><li>Bu içerikler şirketleri çoğunlukla borsa kodu ve hisse bilgisiyle aktarmaktadır</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Bulgu 08</span>
+          <h3>Sentiment nötr ağırlıklı, negatif sınıflama yok</h3>
+          <ul class="bl"><li>79 mention: <span class="num-b">9 pozitif · 70 nötr · 0 negatif</span></li><li><span class="term" data-tip="Sentiment score: mention bağlamının tonunu 0-100 arasında ölçen skor; 50 nötr eşiktir.">Sentiment score</span>: <span class="num-b">53/100</span></li><li>Nötr sınıf, değer yargısı içermeyen kurulu güç ve portföy listelemelerinden oluşmaktadır</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 02 -->
+    <section id="metod">
+      <div class="crumb"><span class="s">02</span><span>|</span><span>Metodoloji</span></div>
+      <div class="accent-line"></div>
+      <h2>Nasıl ölçüldü</h2>
+      <p class="lede">Ölçüm, Inbound'un AI görünürlük takip altyapısıyla yapılmıştır:</p>
+      <ul class="bl lede-ul"><li>Soru seti "Sektör Aramaları" başlığındaki 5 marka-nötr sorudan oluşmaktadır; soruların hiçbirinde şirket adı geçmemektedir</li><li>Sorular haftalık olarak ChatGPT, Gemini ve Google AI Overview'da çalıştırılmaktadır; bu raporda 2 - 21 Eylül 2026 arasındaki koşularda dönen 88 cevap kullanılmıştır</li><li>Cevapların tam metni üzerinde mention, sıra ve sentiment analizi yapılmıştır; tüm şirketler aynı yöntemle sayılmıştır</li><li>Enerjisa için iki katman ayrıca izlenmiştir: <b>"Enerjisa" adının geçmesi</b> ve <b>Enerjisa Üretim adıyla geçmesi</b></li></ul>
+      <div class="tiles">
+        <div class="tile click q-open2 reveal" data-f="all"><div class="v">5</div><div class="k">marka-nötr soru<br><u>soruları görüntüle</u></div></div>
+        <div class="tile reveal"><div class="v">88</div><div class="k">cevap metni<br>ChatGPT 25 · Gemini 32 · AIO 31</div></div>
+        <div class="tile reveal"><div class="v">3</div><div class="k">model<br>ChatGPT + Gemini + AI Overview</div></div>
+        <div class="tile reveal"><div class="v">57</div><div class="k">tespit edilen şirket<br>en az 2 cevapta geçen</div></div>
+        <div class="tile reveal"><div class="v">79</div><div class="k">Enerjisa mention'ı<br>sentiment analizine girdi</div></div>
+        <div class="tile reveal"><div class="v">680</div><div class="k">citation<br>127 farklı domain</div></div>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section id="metrikler">
+      <div class="crumb"><span class="s">03</span><span>|</span><span>Metrik sözlüğü</span></div>
+      <div class="accent-line"></div>
+      <h2>Rapordaki metrikler</h2>
+      <p class="lede">Rapor boyunca kullanılan metrikler aşağıda özetlenmiştir. Her kartta metriğin bu ölçümdeki Enerjisa Üretim değeri örnek olarak verilmektedir; metin içinde kesikli çizgiyle işaretli terimlerin üzerine gelindiğinde de aynı tanımlar görülebilir.</p>
+      <div class="metric-grid">
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>VISIBILITY</div><div class="mv">%69,3<small> Enerjisa Üretim adıyla</small></div><div class="md">Şirketin, cevapların yüzde kaçında geçtiği (mention rate). Enerjisa Üretim, 88 cevabın 61'inde adıyla yer almaktadır; "Enerjisa" adı 79 cevapta (%89,8) geçmektedir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10M7 12h10M7 17h6"/></svg>MENTION</div><div class="mv">61<small> / 88 cevap</small></div><div class="md">Şirketin bir AI cevabının metninde adıyla yer alması. Kaynak linklerindeki domain adları mention sayılmamıştır.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 5 15 19 18 12 22 12"/></svg>SHARE OF VOICE</div><div class="mv">%7,8<small> 782 mention içinde</small></div><div class="md">Cevaplarda geçen tüm şirket mention'ları içinde şirketin aldığı pay. 88 cevaptaki 782 şirket mention'ının %7,8'i Enerjisa Üretim'e aittir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>AVG POSITION</div><div class="mv">2,7<small> ChatGPT + Gemini</small></div><div class="md">Şirket mention edildiğinde cevap listesindeki ortalama sırası. 1'e yaklaştıkça şirket, modelin ilk önerisi olmaya yaklaşır. AI Overview cevaplarının çoğunda sıra değeri bulunmadığından ChatGPT ve Gemini üzerinden hesaplanır.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>SOURCE VISIBILITY</div><div class="mv">%10,2<small> citation</small></div><div class="md">Cevabın kaynakçasında şirketin sitesinin geçtiği oran. enerjisauretim.com.tr, 88 cevabın 9'unda kaynak gösterilmiştir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>CITATION</div><div class="mv">680<small> toplam</small></div><div class="md">Cevapta kaynak olarak gösterilen URL. Bu ölçümde 127 farklı domain'e 680 citation dağıtılmıştır; 10'u enerjisauretim.com.tr'ye gitmektedir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>SENTIMENT SCORE</div><div class="mv">53<small> / 100</small></div><div class="md">Mention'ın geçtiği bağlamın tonu: pozitif, nötr veya negatif sınıfı ve 0-100 arası skor. 50, nötr eşiktir.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="5" height="10" rx="1"/><rect x="15" y="4" width="5" height="16" rx="1"/></svg>1. SIRA</div><div class="mv">24<small> kez listenin başında</small></div><div class="md">Şirketin cevaptaki şirket listesinin ilk sırasında yer alma sayısı (üç model birlikte). Enerjisa Üretim 24 cevapta ilk sıradadır; en yakın şirketler Cengiz Enerji, Zorlu Enerji ve ENKA'dır (10'ar).</div></div>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section id="siralama">
+      <div class="crumb"><span class="s">04</span><span>|</span><span>Şirket sıralaması</span></div>
+      <div class="accent-line"></div>
+      <h2>Sektör sorularında tam sıralama</h2>
+      <p class="lede">5 sorunun 88 cevabında <b>57 şirket</b> tespit edilmiştir. İlk dört şirket %65-71 bandında yakın bir küme oluşturmaktadır: Akfen Yenilenebilir (%70,5), Enerjisa Üretim (%69,3), Aydem Yenilenebilir (%68,2) ve Zorlu Enerji (%64,8). Beşinci sıradaki Cengiz Enerji %34,1 ile bu kümenin belirgin biçimde gerisindedir.</p>
+      <div class="panel reveal">
+        <div class="ph"><h3>57 şirketin tamamı</h3><span class="pk q-open" data-f="all" style="cursor:pointer">5 SORU · CEVAP METNİ ANALİZİ</span></div>
+        <div class="scrolly tall tscroll"><table class="rt" id="rank"></table></div>
+        <div class="pnote">Kolon tanımları için <a href="#metrikler">metrik sözlüğüne</a> bakılabilir.<ul class="bl"><li><b>POS</b> kolonu ChatGPT ve Gemini cevaplarındaki şirket sırasından, <b>1.</b> kolonu üç modelde listenin ilk sırasında yer alma sayısından hesaplanmıştır</li><li>GPT / GEM / AIO kolonları modelin kendi cevap sayısına oranlanmıştır (ChatGPT 25, Gemini 32, AI Overview 31 cevap)</li><li>En az 2 cevapta geçen şirketler listelenmiştir; türbin ve panel üreticileri (Vestas, Nordex, Enercon, Siemens Gamesa vb.) sıralama dışında tutulmuştur</li></ul></div>
+      </div>
+      <div class="note reveal">
+        <div class="nt">Not</div>
+        <ul class="bl"><li>Enerjisa Üretim ile Enerjisa Enerji ayrı satırlarda sayılmıştır. İki şirket tek satırda birleştirildiğinde "Enerjisa" adı <b>%89,8</b> visibility ile sıralamanın ilk sırasına çıkmaktadır</li><li>Enerjisa Üretim, 24 kez listenin ilk sırasında yer alarak bu kolonda belirgin biçimde öndedir; Akfen Yenilenebilir ise daha sık listelenmekle birlikte ortalama 4,4. sırada yer almaktadır</li></ul>
+      </div>
+    </section>
+
+    <!-- 05 -->
+    <section id="iki-enerjisa">
+      <div class="crumb"><span class="s">05</span><span>|</span><span>Enerjisa Üretim & Enerjisa Enerji</span></div>
+      <div class="accent-line"></div>
+      <h2>"Enerjisa" adı geçtiğinde hangi şirket anlatılıyor?</h2>
+      <p class="lede">Aynı grup çatısındaki iki şirket, AI cevaplarında sık sık iç içe geçmektedir. "Enerjisa" adının geçtiği 79 cevabın <b>61</b>'inde Enerjisa Üretim adıyla yer almakta, <b>18</b>'inde ise yalnızca Enerjisa Enerji (dağıtım, perakende ve müşteri çözümleri şirketi) listelenmektedir.</p>
+      <div class="split rev">
+        <div class="panel reveal">
+          <div class="ph"><h3>Soru bazında Enerjisa mention'ları</h3><span class="pk">79 MENTION · HANGİ AD?</span></div>
+          <div id="conf"></div>
+          <div class="legend"><span><i style="background:var(--coral)"></i> Enerjisa Üretim adıyla</span><span><i style="background:#9AA3C7"></i> Yalnızca Enerjisa Enerji</span></div>
+          <div class="pnote"><ul class="bl"><li>"En büyük özel üretici", rüzgar ve hidroelektrik sorularında Enerjisa mention'larının tamamı Enerjisa Üretim adıyladır</li><li>Ayrışma <b>güneş</b> (16 mention'ın 12'si) ve <b>yenilenebilir</b> (18 mention'ın 6'sı) sorularında yoğunlaşmaktadır</li></ul></div>
+        </div>
+        <div class="txt reveal">
+          <p>Ayrışmanın iki farklı görünümü bulunmaktadır:</p>
+          <ul class="bl"><li><b>Güneş sorusu:</b> modeller Enerjisa'nın güneş faaliyetini ağırlıkla Enerjisa Enerji'nin çatı GES ve müşteri çözümleri üzerinden aktarmaktadır. Enerjisa Üretim'in Bandırma ve Karabük GES'leri bu soruda 17 cevabın 4'ünde yer almaktadır</li><li><b>Yenilenebilir sorusu:</b> bazı cevaplar Enerjisa Enerji'yi "rüzgar ve hidroelektrik santralleriyle yenilenebilir enerji üretimine katkı sağlayan" şirket olarak tanımlamaktadır; üretim portföyü dağıtım şirketine bağlanmaktadır</li><li><b>Ad ve borsa kodu:</b> iki cevapta Enerjisa Üretim, Enerjisa Enerji'nin borsa kodu (ENJSA) ile birlikte yazılmaktadır; iki AI Overview cevabı iki şirketi "Enerjisa Üretim / Enerjisa Enerji" başlığı altında birleştirmektedir</li></ul>
+          <p>Enerjisa Enerji'nin mention edildiği 28 cevabın 10'unda Enerjisa Üretim de ayrıca anılmaktadır; bu cevaplarda Enerjisa Üretim çoğunlukla Enerjisa Enerji maddesinin alt cümlesinde yer almaktadır.</p>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <blockquote>"Enerjisa Enerji (ENJSA) - Sabancı Holding ve E.ON ortaklığıyla faaliyet gösteren Enerjisa Enerji, Türkiye'nin önde gelen elektrik dağıtım, perakende satış ve müşteri çözümleri şirketidir. Üretim portföyünde hidroelektrik ve rüzgar santralleri önemli yer tutmaktadır."</blockquote>
+        <cite>Gemini · "Türkiye'de yenilenebilir enerji üretiminde öne çıkan şirketler kimler?" cevabından (2 Eylül 2026). Aynı maddenin devamında Enerjisa Üretim'in santral sayılarına yer verilmektedir.</cite>
+      </div>
+      <div class="note reveal">
+        <div class="nt">Değerlendirme</div>
+        <ul class="bl"><li>Şirket adlarının kaynak içeriklerde ayrıştırılmadan geçmesi, modellerin iki şirketi aynı madde altında toplamasıyla ilişkilendirilebilir</li><li>Kurumsal sayfalarda Enerjisa Üretim'in tam adı, faaliyet alanı (elektrik üretimi) ve Enerjisa Enerji'den ayrımının açık cümlelerle yer alması, modellerin portföyü doğru şirkete bağlamasını destekleyebilir</li></ul>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section id="sorular">
+      <div class="crumb"><span class="s">06</span><span>|</span><span>Soru bazında görünüm</span></div>
+      <div class="accent-line"></div>
+      <h2>Beş sektör sorusunda görünüm</h2>
+      <p class="lede">Enerjisa Üretim'in en güçlü olduğu soru <b>"en büyük özel elektrik üreticisi"</b> sorusudur (17/17, ortalama 2,1. sıra). En sınırlı görünüm, Enerjisa adının ağırlıkla Enerjisa Enerji üzerinden geçtiği <b>güneş</b> sorusundadır (Enerjisa Üretim adıyla 4/17).</p>
+      <div class="panel reveal">
+        <div class="ph"><h3>Soru bazında mention, sıra ve rakipler</h3><span class="pk">5 SORU · 2 - 21 EYL 2026</span></div>
+        <div class="tscroll" id="prompt-tbl"></div>
+        <div class="pnote"><ul class="bl"><li><b>Enerjisa adı</b> kolonu "Enerjisa" adının geçtiği, <b>Üretim adıyla</b> kolonu Enerjisa Üretim adının geçtiği cevap sayısını gösterir</li><li><b>Sıra</b> kolonu Enerjisa mention'larının ChatGPT ve Gemini'deki ortalama sırasıdır</li><li>Öne çıkan şirketler kolonunda sorunun cevaplarında en sık geçen dört şirket ve görünürlük oranları yer almaktadır</li></ul></div>
+      </div>
+      <div class="split3">
+        <div class="panel reveal">
+          <div class="ph"><h3>Özel üretici</h3><span class="pk">17 CEVAP</span></div>
+          <p style="font-size:13.5px;margin:0">Cevapların büyük bölümü MW100 ve AA'nın "en büyük 100 elektrik üreticisi" haberlerinden derlenmektedir. Sıralama bu listeyle birebir örtüşmektedir: ENKA (3.978 MWe), Enerjisa Üretim (3.901 MWe), Cengiz Enerji, Limak Enerji, Eren Enerji.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Rüzgar</h3><span class="pk">19 CEVAP</span></div>
+          <p style="font-size:13.5px;margin:0">Gemini ve AI Overview'un 14 cevabının tamamında Enerjisa Üretim yer almaktadır (Gemini'de ortalama 1,9. sıra); 6 cevapta TÜREB verisine dayanan 1.035 MW kapasiteyle aktarılmaktadır. ChatGPT'nin 5 cevabında ise liste RT Enerji, Akfen, Polat Enerji ve Demirer Holding ile başlamaktadır.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Hidroelektrik</h3><span class="pk">17 CEVAP</span></div>
+          <p style="font-size:13.5px;margin:0">Enerjisa Üretim %82,4 ile bu sorunun en görünür şirketidir. Gemini ve AI Overview'un 12 cevabının tamamında yer alırken ChatGPT'de 5 cevabın 2'sinde geçmektedir; ChatGPT listeyi Cengiz Enerji ile başlatmaktadır.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section id="seyir">
+      <div class="crumb"><span class="s">07</span><span>|</span><span>Haftalık seyir</span></div>
+      <div class="accent-line"></div>
+      <h2>Haftalık görünürlük seyri</h2>
+      <p class="lede">Koşular 2 Eylül'de başlamış, haftalık olarak tekrarlanmıştır. Aşağıdaki grafik Enerjisa Üretim adıyla görünürlüğü model ve hafta bazında göstermektedir. Haftalık cevap sayıları küçük olduğundan (model başına 4-20 cevap) değerler yön gösterici olarak okunabilir.</p>
+      <div class="panel reveal">
+        <div class="ph"><h3>Haftalık Enerjisa Üretim görünürlüğü · model bazında</h3><span class="pk">ENERJİSA ÜRETİM ADIYLA · MENTION % · 2 - 21 EYLÜL 2026</span></div>
+        <div class="trendwrap" id="trend-chart"></div>
+        <div class="legend"><span><i style="background:#25347B"></i> ChatGPT</span><span><i style="background:#F5A623"></i> Gemini</span><span><i style="background:#0AA0DC"></i> AI Overview</span></div>
+        <div class="pnote"><ul class="bl"><li><b>Gemini ve AI Overview:</b> "Enerjisa" adı üç haftanın tamamında cevapların %100'ünde geçmektedir; Enerjisa Üretim adıyla görünürlük %71-95 bandındadır</li><li><b>ChatGPT:</b> %35-40 bandında; 8-14 Eylül haftasında ChatGPT cevabı bulunmadığı için bu nokta gösterilmemektedir</li><li>Haftalık değerler, haftanın hangi soruları kapsadığına göre dalgalanmaktadır (21 Eylül koşusu yalnızca yenilenebilir ve rüzgar sorularını kapsamaktadır); Gemini ve AI Overview'daki düşüş ağırlıkla güneş ve yenilenebilir sorularındaki Enerjisa Enerji ayrışmasıyla ilişkilendirilebilir</li></ul></div>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section id="kaynak">
+      <div class="crumb"><span class="s">08</span><span>|</span><span>Mention & source visibility</span></div>
+      <div class="accent-line"></div>
+      <h2>Mention edilmek & kaynak gösterilmek</h2>
+      <div class="split rev">
+        <div class="panel reveal">
+          <div class="ph"><h3>Mention & source visibility</h3><span class="pk">88 CEVAP · %</span></div>
+          <div id="dumbbell"></div>
+          <div class="legend"><span><i style="background:var(--teal)"></i> Mention (cevap analizi)</span><span><i style="background:var(--coral)"></i> Source visibility (citation)</span></div>
+          <div class="pnote"><ul class="bl"><li><b>Enerjisa Üretim:</b> %69,3 mention, %10,2 source visibility (10 citation)</li><li><b>Polat Enerji:</b> %29,5 mention, %20,5 source visibility (19 citation)</li></ul></div>
+        </div>
+        <div class="txt reveal">
+          <p><span class="term" data-tip="Mention: şirketin AI cevabı metninde adıyla yer alması.">Mention</span> ve <span class="term" data-tip="Source visibility: modelin cevabı yazarken o şirkete ait sayfaları kaynak gösterme oranı.">source visibility</span> iki ayrı metriktir. İlki cevabın metninde yer almayı, ikincisi cevabın kaynakçasında yer almayı gösterir.</p>
+          <ul class="bl"><li><b>Enerjisa Üretim:</b> ilk dört şirket içinde sık mention edilmekte, ancak kaynak olarak görece az okunmaktadır. Modeller Enerjisa Üretim bilgisini ağırlıkla MW100, AA, enerji portalları ve aracı kurum içeriklerinden almaktadır</li><li><b>Polat Enerji ve Aydem Yenilenebilir:</b> kendi siteleri cevapların sırasıyla %20,5 ve %17,0'ında kaynak gösterilmektedir. Polat Enerji'nin 19 citation'ının 16'sı rüzgar sorusundan gelmektedir</li><li><b>Zorlu Enerji:</b> %64,8 mention edildiği halde kendi sitesi yalnızca 2 cevapta kaynak gösterilmektedir; yüksek mention düşük kaynak payıyla birlikte görülebilmektedir</li></ul>
+          <p>Kaynak olarak okunmak mention'ı beraberinde getirmemektedir; ancak modelin şirkete dair rakamları hangi sayfadan aldığını belirlemektedir. Bu nedenle iki metriğin birlikte değerlendirilmesi yerinde olur.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section id="anlati">
+      <div class="crumb"><span class="s">09</span><span>|</span><span>Anlatı & sentiment</span></div>
+      <div class="accent-line"></div>
+      <h2>Enerjisa Üretim nasıl anlatılıyor?</h2>
+      <p class="lede">Enerjisa'nın geçtiği <b>79 cevap</b> için sentiment score ortalaması <b>53/100</b>'dür. Sektör sorularında cevaplar büyük ölçüde kurulu güç ve portföy listelemesi biçiminde kurulduğundan nötr sınıf ağırlıktadır.</p>
+      <ul class="bl lede-ul"><li><b>ChatGPT:</b> 50</li><li><b>Gemini:</b> 54</li><li><b>AI Overview:</b> 55</li></ul>
+      <div class="two">
+        <div class="panel reveal">
+          <div class="ph"><h3>Sentiment dağılımı</h3><span class="pk">79 MENTION</span></div>
+          <div class="sent-grid">
+            <svg class="donut" viewBox="0 0 120 120" id="sent-donut" role="img" aria-label="Sentiment dağılımı"></svg>
+            <div>
+              <div class="sbar" id="sent-bar"></div>
+              <div class="legend" style="margin-top:10px"><span><i style="background:var(--green)"></i> Pozitif 9</span><span><i style="background:var(--gold)"></i> Nötr 70</span><span><i style="background:var(--red)"></i> Negatif 0</span></div>
+              <p style="font-size:13px;margin-top:10px">Pozitif sınıflanan bağlamlar "sektörün liderleri arasında", "öncü şirketlerden", "pazar liderlerinden biri" gibi ifadeler içermektedir. Negatif sınıflanan mention bulunmamaktadır.</p>
+            </div>
+          </div>
+          <div class="pnote"><ul class="bl"><li>Pozitif mention'ların 5'i AI Overview, 4'ü Gemini cevaplarındandır</li><li>ChatGPT'deki 16 mention'ın tamamı nötr sınıflanmıştır</li></ul></div>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Cevaplarda öne çıkan temalar</h3><span class="pk">MENTION BAĞLAMLARINDAN</span></div>
+          <div class="theme-chips">
+            <span>kurulu güç & MW</span><span>liderlik & en büyük</span><span>çeşitlendirilmiş portföy</span><span>rüzgar</span><span>hidroelektrik</span><span>Sabancı & E.ON ortaklığı</span><span>yerli & yenilenebilir pay</span>
+          </div>
+          <div style="margin-top:16px">
+            <div class="ph" style="margin-bottom:2px"><span class="pk">MENTION EDİLDİĞİNDE LİSTEDEKİ SIRASI · CHATGPT + GEMINI</span></div>
+            <div class="rankbars" id="rankbars"></div>
+            <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);margin-top:4px"><span>1. sıra</span><span>7. sıra</span></div>
+          </div>
+          <div class="pnote">ChatGPT ve Gemini'de Enerjisa, sıra değeri bulunan 48 mention'ın <b>%67</b>'sinde ilk iki sırada yer almaktadır (10 kez 1., 22 kez 2. sıra).</div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <blockquote>"Enerjisa Üretim - Türkiye'nin özel sektör elektrik üretiminde pazar liderlerinden biridir. Şirketin güncel olarak 12 hidroelektrik santrali bulunmaktadır. Çeşitlendirilmiş üretim portföyü ile toplamda 4.500 MW'ın üzerinde kurulu güce sahiptir ve bu gücün %65'i yerli ve yenilenebilir kaynaklardan gelmektedir."</blockquote>
+        <cite>Gemini · "Türkiye'de en çok hidroelektrik enerji üreten özel şirketler kimler?" cevabında Enerjisa Üretim, listenin 1. sırasında (6 Eylül 2026).</cite>
+      </div>
+      <div class="quote reveal">
+        <blockquote>"TÜREB verilerine göre Ocak 2026 itibarıyla Türkiye'nin en büyük rüzgar yatırımcıları şunlardır: Enerjisa Üretim - 1.035 MW'lık kapasitesiyle Türkiye'nin en büyük rüzgar enerjisi yatırımcılarından biridir."</blockquote>
+        <cite>Gemini · "Türkiye'de rüzgar enerjisi santrali işleten başlıca firmalar hangileri?" cevabından (13 Eylül 2026).</cite>
+      </div>
+
+      <div class="two">
+        <div class="panel reveal">
+          <div class="ph"><h3>Tema profili: anlatı neyden örülü?</h3><span class="pk">79 MENTION BAĞLAMI</span></div>
+          <div id="chart-themes"></div>
+          <div class="pnote">Anlatı büyük ölçüde ölçek ve portföy üzerine kuruludur: liderlik vurgusu, kurulu güç ve kaynak çeşitliliği.<ul class="bl"><li>Dağıtım & perakende teması 20 bağlamda geçmektedir; bu bağlamlar Enerjisa Enerji tanımından gelmektedir</li><li>Depolama & hibrit projeler yalnızca 1 bağlamda yer almaktadır</li></ul></div>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Cevaplarda aktarılan rakamlar</h3><span class="pk">ENERJİSA ÜRETİM ADIYLA GEÇEN 61 CEVAP</span></div>
+          <div class="tscroll"><table class="tbl slim fact">
+            <thead><tr><th scope="col">AKTARILAN DEĞER</th><th scope="col" class="c">CEVAP</th><th scope="col">SİTEDEKİ DEĞER</th></tr></thead>
+            <tbody>
+              <tr><td class="m">3.901 MWe toplam kurulu güç</td><td class="num c">13</td><td>4.500+ MW</td></tr>
+              <tr><td class="m">4.500+ MW toplam kurulu güç</td><td class="c"><span class="pos">3</span></td><td>4.500+ MW</td></tr>
+              <tr><td class="m">3.607 MWe toplam kurulu güç</td><td class="num c">1</td><td>4.500+ MW</td></tr>
+              <tr><td class="m">"Beş rüzgar santrali"</td><td class="num c">8</td><td>18 RES</td></tr>
+              <tr><td class="m">1.035 MW rüzgar kapasitesi (TÜREB)</td><td class="num c">6</td><td>-</td></tr>
+              <tr><td class="m">12 hidroelektrik santrali</td><td class="c"><span class="pos">✓</span></td><td>12 HES</td></tr>
+            </tbody>
+          </table></div>
+          <div class="pnote"><ul class="bl"><li>3.901 MWe değeri MW100 "en büyük 100 elektrik üreticisi" sıralamasından aktarılmaktadır; cevaplar bu listeyi mw100.net, aa.com.tr ve enerji-dunyasi.com üzerinden okumaktadır</li><li>Sitedeki değerler <a class="lnk" href="https://www.enerjisauretim.com.tr/" target="_blank" rel="noopener">enerjisauretim.com.tr</a> ana sayfasından alınmıştır (23 Eylül 2026)</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 -->
+    <section id="dagilim">
+      <div class="crumb"><span class="s">10</span><span>|</span><span>Citation kaynakları</span></div>
+      <div class="accent-line"></div>
+      <h2>Citation'lar hangi kaynaklara gidiyor?</h2>
+      <div class="split">
+        <div class="txt reveal">
+          <p>88 cevapta dağıtılan <b>680 citation</b>'ın (2 - 21 Eylül 2026) kaynak tipi dağılımı yanda görülmektedir. En büyük pay rakip üretim şirketlerinin kendi sitelerine aittir; ikinci büyük grup aracı kurum ve yatırım platformu içerikleridir.</p>
+          <p>enerjisauretim.com.tr'nin payı <span class="num-b">10 citation (%1,5)</span> düzeyindedir. En çok citation alan kaynaklar:</p>
+          <ul class="bl"><li><b>getmidas.com</b> · 44</li><li><b>a1capital.com.tr</b> · 35</li><li><b>enerjiatlasi.com</b> · 31</li><li><b>yesilhaber.net</b> · 31</li><li><b>gedik.com</b> · 29</li></ul>
+          <p>Cevap başına citation sayısı modele göre değişmektedir: Gemini 9,9, AI Overview 7,5, ChatGPT 5,1.</p>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>680 citation'ın kaynak tipi dağılımı</h3><span class="pk">5 SORU · 2 - 21 EYL</span></div>
+          <div class="flow" id="flow"></div>
+          <div class="flow-leg" id="flow-leg"></div>
+          <div class="pnote">Kaynak tipleri domain bazında sınıflandırılmıştır. "Enerjisa Enerji" satırı enerjisa.com.tr ve m.enerjisa.com.tr adreslerini kapsamaktadır.</div>
+        </div>
+      </div>
+      <div class="two">
+        <div class="panel reveal">
+          <div class="ph"><h3>Aracı kurum & yatırım içerikleri</h3><span class="pk">168 CITATION</span></div>
+          <div class="tscroll"><table class="tbl slim" id="tbl-broker"></table></div>
+          <div class="pnote">Yenilenebilir ve güneş sorularında kaynak katmanı ağırlıkla bu içeriklerden oluşmaktadır. Bu içerikler şirketleri "yatırım yapılabilecek enerji hisseleri" çerçevesinde aktardığından, halka açık olmayan Enerjisa Üretim yerine borsada işlem gören Enerjisa Enerji (ENJSA) öne çıkabilmektedir.</div>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Rakip şirket siteleri</h3><span class="pk">206 CITATION · İLK 8</span></div>
+          <div class="tscroll"><table class="tbl slim" id="tbl-comp"></table></div>
+          <div class="pnote">Rüzgar sorusunda polatenerji.com ve guris.com.tr 16'şar citation ile en çok kaynak gösterilen sitelerdir. Rüzgar ve hidroelektrik sorularında şirketlerin santral sayfaları doğrudan kaynak olarak okunmaktadır.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 -->
+    <section id="domain">
+      <div class="crumb"><span class="s">11</span><span>|</span><span>enerjisauretim.com.tr</span></div>
+      <div class="accent-line"></div>
+      <h2>enerjisauretim.com.tr hangi sayfalarla kaynak gösteriliyor?</h2>
+      <div class="split">
+        <div class="txt reveal">
+          <p>enerjisauretim.com.tr'ye giden <b>10 citation</b>'ın tamamı santral portföyü sayfalarına ve ana sayfaya yöneliktir. Kaynak gösterilen sayfalar rüzgar, hidroelektrik ve güneş sorularıyla birebir eşleşmektedir.</p>
+          <ul class="bl"><li>Citation'ların 6'sı Gemini, 4'ü AI Overview cevaplarındandır; <b>ChatGPT cevaplarında enerjisauretim.com.tr kaynak gösterilmemektedir</b></li><li>"En büyük özel üretici" ve yenilenebilir sorularında siteye citation bulunmamaktadır; bu sorularda kurulu güç bilgisi MW100 listesi ve yatırım içeriklerinden okunmaktadır</li><li>AI Overview hidroelektrik cevabı, HES portföyü bilgisini doğrudan <a class="lnk" href="https://www.enerjisauretim.com.tr/enerji-uretimi/hidroelektrik-santrallerimiz" target="_blank" rel="noopener">hidroelektrik santrallerimiz</a> sayfasına bağlamaktadır</li></ul>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Kaynak gösterilen sayfalar</h3><span class="pk">10 CITATION · 2 - 21 EYL</span></div>
+          <div id="chart-eco"></div>
+          <div class="pnote"><ul class="bl"><li>Soru bazında: rüzgar 4 · hidroelektrik 4 · güneş 2</li><li>Aynı dönemde enerjisa.com.tr adreslerine 3 citation gitmektedir; üçü de güneş sorusundandır</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12 -->
+    <section id="model">
+      <div class="crumb"><span class="s">12</span><span>|</span><span>Model karşılaştırması</span></div>
+      <div class="accent-line"></div>
+      <h2>Model bazında görünürlük</h2>
+      <p class="lede">Enerjisa Üretim'in adıyla görünürlüğü Gemini'de <span class="num-b">%87,5</span>, AI Overview'da <span class="num-b">%77,4</span>, ChatGPT'de <span class="num-b">%36,0</span>'dır. Gemini cevap başına ortalama 11,4 şirket listelerken ChatGPT 7,4 şirket listelemektedir. Google AI Overview, erişim ölçeği farklı olduğu için <a href="#aio">13. bölümde ayrıca</a> incelenmektedir.</p>
+      <div class="two">
+        <div class="panel reveal">
+          <div class="ph"><h3>ChatGPT & Gemini</h3><span class="pk">GPT / GEM MENTION % · İLK 12</span></div>
+          <div class="scrolly"><table class="hm" id="hm"></table></div>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Görünürlük modele göre nasıl değişiyor?</h3><span class="pk">İLK 5 ŞİRKET · MENTION %</span></div>
+          <div id="model-lines"></div>
+          <div class="legend" id="model-lines-leg"></div>
+        </div>
+      </div>
+      <div class="note mint reveal">
+        <div class="nt">Gözlem</div>
+        <ul class="bl"><li><b>ChatGPT:</b> ilk dört şirketin tamamı %36-40 bandında kalmaktadır; ChatGPT en sık Cengiz Enerji'yi (%44,0) listelemektedir</li><li><b>Gemini:</b> Zorlu Enerji (%90,6), Enerjisa Üretim ve Aydem Yenilenebilir (%87,5) öndedir</li><li>Gemini ile ChatGPT arasındaki en büyük farklar Zorlu Enerji (54,6 puan) ve Enerjisa Üretim'dedir (51,5 puan)</li></ul>
+      </div>
+    </section>
+
+    <!-- 13 -->
+    <section id="aio">
+      <div class="crumb"><span class="s">13</span><span>|</span><span>Google AI Overview</span></div>
+      <div class="accent-line"></div>
+      <h2>Google AI Overview: en geniş erişimli AI yüzeyi</h2>
+      <p class="lede">AI Overview görünürlüğü bu raporda ChatGPT ve Gemini'den <b>ayrı bir başlık altında</b> izlenmektedir. Chatbot kullanımı hızla büyümekle birlikte arama davranışının büyük çoğunluğu Google'da gerçekleşmekte ve AI Overview bu aramaların doğrudan üzerinde gösterilmektedir.</p>
+      <div class="panel reveal">
+        <div class="ph"><h3>Neden ayrı raporlanıyor?</h3><span class="pk">GLOBAL KULLANIM VERİLERİ</span></div>
+        <div class="tiles" style="margin-top:8px">
+          <div class="tile"><div class="v">5+ trilyon</div><div class="k">Google'da yıllık arama<br>2024 · ~14 milyar arama/gün</div></div>
+          <div class="tile" style="box-shadow:0 0 0 2px var(--coral),var(--shadow-card)"><div class="v">2,5+ milyar</div><div class="k">AI Overviews aylık kullanıcı<br>Mayıs 2026</div></div>
+          <div class="tile"><div class="v">900 mn</div><div class="k">ChatGPT haftalık<br>aktif kullanıcı · Şubat 2026</div></div>
+          <div class="tile"><div class="v">1 milyar</div><div class="k">Gemini uygulaması aylık<br>kullanıcı · Ağustos 2026</div></div>
+        </div>
+        <ul class="bl"><li>Google, küresel arama pazarının yaklaşık <b>%90'ını</b> elinde tutmaktadır</li><li>Arama-benzeri sorgu hacmi 2024 analizinde ChatGPT'nin <b>~373x</b>, 2025 güncellemesinde ~210x olarak ölçülmüştür</li><li>AI Overviews'ı kullanan aylık kişi sayısı (2,5 milyar+, Mayıs 2026), ChatGPT'nin haftalık (900 milyon, Şubat 2026) ve Gemini uygulamasının aylık (1 milyar, Ağustos 2026) kullanıcı sayısının üzerindedir</li></ul>
+        <p style="font-size:14px;margin-top:12px;max-width:none">Bir kullanıcının AI üretimi bir cevapla karşılaşma olasılığının en yüksek olduğu yer bir chatbot değil, <b>Google arama sonucu sayfasıdır</b>. Bu nedenle AI Overview görünürlüğü, iki chatbot'un ortalaması içinde eritilmeden ayrıca raporlanmaktadır.</p>
+        <div class="pnote">Kaynaklar: <a href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/" target="_blank" rel="noopener">Google I/O 2026: AI Overviews 2,5 milyar+ aylık kullanıcı (19 Mayıs 2026)</a> · <a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/" target="_blank" rel="noopener">Google: Gemini uygulaması 1 milyar aylık kullanıcı (11 Ağustos 2026)</a> · <a href="https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users" target="_blank" rel="noopener">TechCrunch: ChatGPT 900 milyon haftalık kullanıcı (27 Şubat 2026)</a> · <a href="https://sparktoro.com/blog/new-research-google-search-grew-20-in-2024-receives-373x-more-searches-than-chatgpt/" target="_blank" rel="noopener">SparkToro & Datos (2024)</a> · <a href="https://searchengineland.com/google-210x-bigger-chatgpt-search-462604" target="_blank" rel="noopener">Search Engine Land: 2025 güncellemesi</a> · <a href="https://gs.statcounter.com/search-engine-market-share" target="_blank" rel="noopener">StatCounter: arama motoru pazar payları</a></div>
+      </div>
+      <div class="two">
+        <div class="panel reveal">
+          <div class="ph"><h3>AI Overview'da şirket görünürlüğü</h3><span class="pk">5 SORU · 31 CEVAP · MENTION %</span></div>
+          <div id="aio-m"></div>
+          <div class="pnote">AI Overview'da Enerjisa Üretim <b>%77,4</b> ile Akfen Yenilenebilir'in (%80,6) ardından 2. sıradadır; Aydem Yenilenebilir %71,0 ile üçüncüdür. "Enerjisa" adı AI Overview'un 31 cevabının tamamında geçmektedir.</div>
+        </div>
+        <div class="panel reveal">
+          <div class="ph"><h3>Tetiklenme & kaynak profili</h3><span class="pk">5 SORU · 2 - 21 EYL</span></div>
+          <p style="font-size:14px;margin-bottom:0"><b>Tetiklenme</b></p><ul class="bl"><li>31 AI Overview cevabının hiçbiri boş dönmemiştir</li><li>Beş sorunun tamamında AI Overview gösterilmektedir</li></ul>
+          <p style="font-size:14px;margin:14px 0 0"><b>Kaynak profili</b></p><ul class="bl"><li>AI Overview cevaplarında 234 citation bulunmaktadır; 4'ü enerjisauretim.com.tr'ye gitmektedir</li><li>instagram.com ve facebook.com'a giden 8 citation'ın tamamı AI Overview'dandır</li><li>Kamu kaynakları (euas.gov.tr, temsan.gov.tr) yalnızca AI Overview'da kaynak gösterilmektedir</li></ul>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <blockquote>"Enerjisa Üretim: Portföyünün büyük bir kısmı yerli ve yenilenebilir kaynaklardan oluşan, rüzgâr, güneş ve hidroelektrik alanında büyük yatırımları bulunan öncü şirketlerdendir."</blockquote>
+        <cite>Google AI Overview · "Türkiye'de yenilenebilir enerji üretiminde öne çıkan şirketler kimler?" cevabında Enerjisa Üretim, listenin 1. sırasında (21 Eylül 2026).</cite>
+      </div>
+    </section>
+
+    <!-- 14 -->
+    <section id="notlar">
+      <div class="crumb"><span class="s">14</span><span>|</span><span>Metodoloji notları</span></div>
+      <div class="accent-line"></div>
+      <h2 style="font-size:clamp(20px,2vw,26px)">Metodoloji notları & sınırlamalar</h2>
+      <div class="mnotes reveal">
+        <div><span class="mi">A</span><span><b>Marka-nötr tasarım.</b> Sorularda şirket adı geçmez; mention tamamen modelin kendi tercihidir. Soru seti "Sektör Aramaları" başlığındaki 5 sorudan oluşmaktadır.</span></div>
+        <div><span class="mi">B</span><span><b>Örneklem.</b> 5 soru × 3 model, 2 - 21 Eylül 2026 arasındaki koşular = 88 cevap. Model başına cevap sayısı farklıdır (ChatGPT 25, Gemini 32, AI Overview 31); oranlar her modelin kendi cevap sayısına göre hesaplanmıştır. Soru başına 17-19 cevap bulunduğundan yüzdeler yön gösterici olarak okunabilir.</span></div>
+        <div><span class="mi">C</span><span><b>İki mention katmanı.</b> "Enerjisa adı" katmanı Enerjisa Üretim ve Enerjisa Enerji'nin birlikte sayıldığı değerdir; "Enerjisa Üretim adıyla" katmanı yalnızca Enerjisa Üretim adının geçtiği cevapları kapsar. Sıralama tablolarında iki şirket ayrı satırlarda yer almaktadır.</span></div>
+        <div><span class="mi">D</span><span><b>Entity kapsamı.</b> Cevap metni analizi en az 2 cevapta geçen 57 şirket tespit etmiştir. Avg. position ChatGPT ve Gemini cevapları üzerinden hesaplanmıştır. Türbin ve panel üreticileri sıralama dışında tutulmuş, kamu şirketi EÜAŞ sıralamaya dahil edilmiştir.</span></div>
+        <div><span class="mi">E</span><span><b>Sentiment.</b> Mention bağlamı sınıflandırmasıdır (pozitif / nötr / negatif + 0-100 skor); "Enerjisa" adının geçtiği 79 cevap üzerinden hesaplanmıştır.</span></div>
+        <div><span class="mi">F</span><span><b>Yorum.</b> AI görünürlüğü şirketin ölçeğinin değil, modellerin okuduğu kaynak ekosisteminin ölçüsüdür. Sitedeki değerler 23 Eylül 2026 tarihinde enerjisauretim.com.tr üzerinden kontrol edilmiştir.</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- mobil ToC -->
+<button class="toc-fab" id="tocFab">☰ İçindekiler</button>
+<div class="toc-sheet" id="tocSheet">
+  <div class="toc-sheet__bg" data-close></div>
+  <div class="toc-sheet__panel">
+    <h4>İçindekiler <button class="toc-close" data-close aria-label="Kapat">✕</button></h4>
+    <div id="tocSheetLinks"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="hwrap">
+    <div>
+      <h4>Enerjisa Üretim AI Görünürlük Raporu</h4>
+      <p style="color:rgba(255,255,255,.75);max-width:480px">Eylül 2026 ölçümü (2 - 21 Eylül 2026) · Sektör Aramaları soru seti.</p>
+      <p class="fine">Veri: AI görünürlük takip veritabanı · 5 marka-nötr soru × ChatGPT + Gemini + Google AI Overview · 88 cevap metni · 680 citation (2 - 21 Eylül 2026). Tüm değerler yüzde veya adet olarak verilmiştir.</p>
+      <img class="wm" src="assets/brand/inbound-wordmark-white.png" alt="Inbound">
+    </div>
+    <div class="gl">
+      <h4 style="font-size:15px">Sözlük</h4>
+      <b>Mention:</b> şirketin AI cevabı metninde adıyla yer alması.<br>
+      <b>Visibility:</b> şirketin, cevapların yüzde kaçında yer aldığı.<br>
+      <b>SOV:</b> tüm şirket mention'ları içindeki pay.<br>
+      <b>Avg. position:</b> mention edildiğinde listedeki ortalama sıra.<br>
+      <b>Source visibility:</b> şirketin sitesinin kaynak gösterildiği cevap oranı.<br>
+      <b>Citation:</b> cevapta kaynak olarak gösterilen URL.<br>
+      <b>Sentiment score:</b> mention bağlamının 0-100 arası ton skoru.
+    </div>
+  </div>
+</footer>
+
+<!-- soru modal -->
+<div class="qmodal" id="qmodal" role="dialog" aria-modal="true" aria-label="Soru seti">
+  <div class="backdrop" id="qback"></div>
+  <div class="qbox">
+    <div class="qhead">
+      <div class="row1">
+        <h3>Soru seti · 5 marka-nötr sektör sorusu</h3>
+        <a class="ext" href="sorular.html" target="_blank" rel="noopener">Cevaplarla birlikte yeni sekmede aç ↗</a>
+        <button class="x" id="qclose" aria-label="Kapat">✕</button>
+      </div>
+    </div>
+    <div class="qbody" id="qbody"></div>
+  </div>
+</div>
+
+<script src="data/report_data.js?v=sep26"></script>
+<script src="data/questions.js?v=sep26"></script>
+<script>
+const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
+const fmt=v=>v==null?'-':v.toFixed(1).replace('.',',');
+const YOU='Enerjisa Üretim', GRP='Enerjisa Enerji', PUB=new Set(['EÜAŞ']);
+function favImg(d,sm){const i=document.createElement('img');i.className='fav'+(sm?' sm':'');i.src=LOGO(d);i.alt='';i.loading='lazy';i.onerror=()=>{i.style.visibility='hidden'};return i}
+const fav=d=>d?`<img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`:'<span class="fav sm" style="visibility:hidden"></span>';
+
+/* ---- sıralama tablosu ---- */
+(function(){
+  const el=document.getElementById('rank');const mx=RD.rank[0].vis;
+  let h=`<thead><tr><th class="c">#</th><th>ŞİRKET</th><th>VISIBILITY</th><th class="c">%</th><th class="c">SOV</th><th class="c">POS</th><th class="c">1.</th><th class="c">GPT %</th><th class="c">GEM %</th><th class="c">AIO %</th></tr></thead><tbody>`;
+  RD.rank.forEach((r,i)=>{
+    const you=r.b===YOU,grp=r.b===GRP,pub=PUB.has(r.b);
+    h+=`<tr class="${you?'you':''}${grp?' grp':''}"><td class="idx">${i+1}</td>
+      <td><span class="bn">${fav(r.d)}${r.b}${grp?'<span class="grp-tag">GRUP ŞİRKETİ</span>':''}${pub?'<span class="pub-tag">KAMU</span>':''}</span></td>
+      <td class="bar"><div class="bt"><div class="bf" data-w="${r.vis/mx*100}"></div></div></td>
+      <td class="num c">${fmt(r.vis)}</td><td class="num c" style="color:var(--ink-3)">${fmt(r.sov)}</td>
+      <td class="num c">${fmt(r.pos)}</td><td class="num c">${r.first||''}</td>
+      <td class="num c" style="color:var(--ink-3)">${fmt(r.cg)}</td><td class="num c" style="color:var(--ink-3)">${fmt(r.gm)}</td><td class="num c" style="color:var(--ink-3)">${fmt(r.ao)}</td></tr>`;
+  });
+  el.innerHTML=h+'</tbody>';
+})();
+
+/* ---- Enerjisa ayrışması ---- */
+(function(){
+  const el=document.getElementById('conf');const MX=19;
+  RD.prompts.forEach(p=>{
+    const eo=p.tool-p.u;
+    el.insertAdjacentHTML('beforeend',`<div class="prow"><div class="ph2"><b>${p.s}</b><span>${p.u} Üretim · ${eo} yalnızca Enerji · ${p.n} cevap</span></div>
+      <div class="stack"><div style="width:${p.u/MX*100}%;background:var(--coral)" title="Enerjisa Üretim adıyla: ${p.u}"></div><div style="width:${eo/MX*100}%;background:#9AA3C7" title="Yalnızca Enerjisa Enerji: ${eo}"></div></div></div>`);
+  });
+})();
+
+/* ---- soru tablosu ---- */
+(function(){
+  const el=document.getElementById('prompt-tbl');
+  let x='<table class="tbl"><thead><tr><th scope="col">SORU</th><th scope="col" class="c">CEVAP</th><th scope="col" class="c">ENERJİSA ADI</th><th scope="col" class="c">ÜRETİM ADIYLA</th><th scope="col" class="c">SIRA</th><th scope="col">ÖNE ÇIKAN ŞİRKETLER</th><th scope="col">ÖNE ÇIKAN KAYNAKLAR</th></tr></thead><tbody>';
+  RD.prompts.forEach(p=>{
+    const u=p.u===p.n?`<span class="pos">${p.u}/${p.n}</span>`:(p.u/p.n<.5?`<span class="zero">${p.u}/${p.n}</span>`:`<span class="pos u">${p.u}/${p.n}</span>`);
+    const top=p.top.filter(t=>t[0]!==YOU).slice(0,4).map(([b,d,v])=>`<span class="chip${b===GRP?' you':''}">${fav(d)}${b} <b class="n">%${Math.round(v)}</b></span>`).join('');
+    const src=p.src.slice(0,3).map(([d,c])=>`<span class="chip">${fav(d)}${d} <b class="n">${c}</b></span>`).join('');
+    x+=`<tr><td style="min-width:200px"><b>${p.q}</b></td><td class="num c">${p.n}</td><td class="num c">${p.tool}/${p.n}</td><td class="c">${u}</td><td class="num c">${fmt(p.pos)}</td><td style="min-width:230px">${top}</td><td style="min-width:200px">${src}</td></tr>`;
+  });
+  el.innerHTML=x+'</tbody></table>';
+})();
+
+/* ---- haftalık seyir ---- */
+(function(){
+  const el=document.getElementById('trend-chart');if(!el)return;
+  const T=RD.trend,W=660,H=290,L=46,R=40,TP=16,B=42,lo=0,hi=100;
+  const X=i=>L+30+i*(W-L-R-60)/(T.length-1), Y=v=>TP+(hi-v)*(H-TP-B)/(hi-lo);
+  const S=[['cg_u','ChatGPT','#25347B'],['gm_u','Gemini','#F5A623'],['ao_u','AI Overview','#0AA0DC']];
+  let g='';
+  [0,25,50,75,100].forEach(v=>{g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#EEF1F6"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" font-size="10" fill="#8A8A8A" font-family="Outfit,system-ui">%${v}</text>`});
+  T.forEach((t,i)=>{g+=`<text x="${X(i)}" y="${H-B+22}" text-anchor="middle" font-size="10.5" fill="#4A4A4A" font-family="Outfit,system-ui">${t.w}</text>`});
+  S.forEach(([k,,c])=>{
+    let d='',pen=false;
+    T.forEach((t,i)=>{const v=t[k];if(v==null){pen=false;return}d+=(pen?'L':'M')+X(i)+','+Y(v)+' ';pen=true});
+    g+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="${k==='ao_u'?3:2.2}" stroke-linecap="round" stroke-linejoin="round"/>`;
+    T.forEach((t,i)=>{if(t[k]!=null)g+=`<circle cx="${X(i)}" cy="${Y(t[k])}" r="4" fill="${c}" stroke="#fff" stroke-width="1.5"/>`});
+  });
+  g+=`<line id="trend-guide" x1="0" x2="0" y1="${TP}" y2="${H-B}" stroke="#8A8A8A" stroke-dasharray="3 3" style="display:none"/>`;
+  const bw=(W-L-R-60)/(T.length-1);
+  T.forEach((t,i)=>{g+=`<rect class="hz" data-i="${i}" x="${X(i)-bw/2}" y="${TP}" width="${bw}" height="${H-TP-B}"/>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Haftalık Enerjisa Üretim görünürlüğü, model bazında">${g}</svg>`;
+  let tt=document.getElementById('tt');if(!tt){tt=document.createElement('div');tt.id='tt';document.body.appendChild(tt)}
+  const guide=el.querySelector('#trend-guide');
+  el.querySelectorAll('.hz').forEach(r=>{
+    const show=e=>{const i=+r.dataset.i,t=T[i];
+      guide.setAttribute('x1',X(i));guide.setAttribute('x2',X(i));guide.style.display='';
+      tt.innerHTML=`<div class="tt-h">${t.w} 2026</div>`+S.map(([k,n,c])=>{const nk=k.replace('_u','_n');return `<div class="tt-r"><span><i style="background:${c}"></i>${n}</span><b>${t[k]==null?'-':'%'+fmt(t[k])+' · '+t[nk]+' cevap'}</b></div>`}).join('');
+      tt.style.display='block';
+      const x=(e.clientX||r.getBoundingClientRect().left)+14,y=(e.clientY||r.getBoundingClientRect().top)+14;
+      tt.style.left=Math.min(x,innerWidth-tt.offsetWidth-10)+'px';tt.style.top=Math.min(y,innerHeight-tt.offsetHeight-10)+'px'};
+    r.addEventListener('mousemove',show);r.addEventListener('click',show);
+    r.addEventListener('mouseleave',()=>{tt.style.display='none';guide.style.display='none'});
+  });
+})();
+
+/* ---- dumbbell ---- */
+(function(){
+  const names=['Akfen Yenilenebilir','Enerjisa Üretim','Aydem Yenilenebilir','Zorlu Enerji','Cengiz Enerji','Enerjisa Enerji','Polat Enerji','Güriş','Fiba Yenilenebilir','Energo-Pro'];
+  const el=document.getElementById('dumbbell');const MAX=76;
+  names.forEach(n=>{
+    const r0=RD.rank.find(x=>x.b===n),sv=RD.source_vis[n];if(!r0||!sv)return;
+    const a=r0.vis,b=sv.pct,you=n===YOU;
+    const r=document.createElement('div');r.className='drow'+(you?' you':'');
+    r.appendChild(favImg(r0.d));
+    const dn=document.createElement('div');dn.className='dn';dn.textContent=n;dn.title=n;r.appendChild(dn);
+    const t=document.createElement('div');t.className='dtrack';
+    const lo=Math.min(a,b)/MAX*100,hi=Math.max(a,b)/MAX*100;
+    t.innerHTML=`<div class="dline" style="left:${lo}%;width:${hi-lo}%"></div>
+      <div class="dpt a" style="left:${a/MAX*100}%"></div><div class="dpt b" style="left:${b/MAX*100}%"></div>
+      <div class="dlab" style="left:${a/MAX*100}%">${fmt(a)}</div><div class="dlab lo" style="left:${b/MAX*100}%">${fmt(b)}</div>`;
+    r.appendChild(t);el.appendChild(r);
+  });
+})();
+
+/* ---- sentiment ---- */
+(function(){
+  const s=RD.kpi.sent,pos=s.positive||0,neu=s.neutral||0,neg=s.negative||0,tot=pos+neu+neg;
+  const svg=document.getElementById('sent-donut');const R=44,C=2*Math.PI*R;const p=pos/tot;
+  svg.innerHTML=`<circle cx="60" cy="60" r="${R}" fill="none" stroke="#F5A623" stroke-width="15"/>
+   <circle cx="60" cy="60" r="${R}" fill="none" stroke="#2E7D32" stroke-width="15" stroke-linecap="round" stroke-dasharray="${(p*C).toFixed(1)} ${C.toFixed(1)}" transform="rotate(-90 60 60)"/>
+   <text x="60" y="56" text-anchor="middle" font-size="20" font-weight="800" fill="#25347B" font-family="Bricolage Grotesque,system-ui">%${Math.round((neu/tot)*100)}</text>
+   <text x="60" y="74" text-anchor="middle" font-size="9.5" fill="#8A8A8A" font-family="Outfit,system-ui">nötr · ${tot} mention</text>`;
+  const bar=document.getElementById('sent-bar');
+  [['#2E7D32',pos],['#F5A623',neu],['#D32F2F',neg]].forEach(([c,v])=>{if(!v)return;const d=document.createElement('div');d.style.width=(100*v/tot)+'%';d.style.background=c;d.title=v;bar.appendChild(d)});
+  const rb=document.getElementById('rankbars');const dist={1:10,2:22,3:5,4:2,5:4,6:2,7:3};const mx=22;
+  for(let i=1;i<=7;i++){const v=dist[i]||0;const div=document.createElement('div');div.className='rb';div.innerHTML=`<i style="height:${Math.max(4,(v/mx)*70)}px"></i><b>${v}</b>`;rb.appendChild(div)}
+})();
+
+/* ---- tema profili ---- */
+(function(){
+  const el=document.getElementById('chart-themes');const T=RD.themes;const mx=T[0][1];
+  const weak=new Set(['dağıtım & perakende (Enerjisa Enerji)','depolama & hibrit','doğal gaz / termik','jeotermal']);
+  T.forEach(([n,v])=>{const r=document.createElement('div');r.className='cl-row'+(weak.has(n)?' weak':'');
+    r.innerHTML=`<div class="cl-head"><span class="cn">${n}</span><span class="cv" style="font-size:15px">${v}</span></div><div class="cl-bar"><i data-w="${v/mx*100}"></i></div>`;el.appendChild(r)});
+})();
+
+/* ---- flow ---- */
+const CAT=[['comp','Rakip üretim şirketleri','#25347B'],['broker','Aracı kurum & yatırım içerikleri','#4A4A4A'],['sector','Enerji sektör portalları','#F5A623'],['news','Haber & ekonomi medyası','#9AA3C7'],['supply','GES kurulum & ekipman firmaları','#E9C46A'],['wiki','Wikipedia','#BDBDBD'],['social','Sosyal medya','#D7C4E8'],['ejs','Enerjisa Enerji','#7FD4F4'],['gov','Kamu','#C8E6C9'],['you','enerjisauretim.com.tr','#0AA0DC']];
+(function(){
+  const el=document.getElementById('flow'),leg=document.getElementById('flow-leg');const tot=RD.cit_total;
+  CAT.forEach(([k,n,c])=>{const v=RD.cit_cats[k]||0;if(!v)return;
+    const d=document.createElement('div');d.style.width=Math.max(v/tot*100,.6)+'%';d.style.background=c;d.title=`${n}: ${v}`;el.appendChild(d);
+    const l=document.createElement('span');l.innerHTML=`<i style="background:${c}"></i>${n}<b>${v}</b>`;leg.appendChild(l)});
+})();
+(function(){
+  function t(elId,cat,n){
+    const rows=RD.top_domains_all.filter(x=>x[2]===cat).slice(0,n);
+    document.getElementById(elId).innerHTML='<thead><tr><th scope="col">SİTE</th><th scope="col" class="c">CITATION</th></tr></thead><tbody>'+rows.map(([d,c])=>`<tr><td><span class="chip">${fav(d)}<a class="lnk" style="border:none;color:inherit" href="https://${d}" target="_blank" rel="noopener">${d}</a></span></td><td class="num c">${c}</td></tr>`).join('')+'</tbody>';
+  }
+  t('tbl-broker','broker',6);t('tbl-comp','comp',8);
+})();
+
+/* ---- enerjisauretim.com.tr sayfaları ---- */
+(function(){
+  const el=document.getElementById('chart-eco');const agg={};
+  RD.enerjisa_urls.forEach(([u,p,n])=>{if(!u.includes('enerjisauretim'))return;agg[u]=(agg[u]||0)+n});
+  const rows=Object.entries(agg).sort((a,b)=>b[1]-a[1]);const mx=rows[0][1];
+  rows.forEach(([u,v])=>{
+    const path=u.replace(/^https?:\/\/(www\.)?enerjisauretim\.com\.tr/,'')||'/';
+    const r=document.createElement('div');r.className='drow you';r.style.gridTemplateColumns='24px minmax(0,1fr) 110px 30px';
+    r.appendChild(favImg('enerjisauretim.com.tr'));
+    const dn=document.createElement('div');dn.className='dn';dn.style.whiteSpace='normal';dn.style.fontSize='12.5px';dn.style.fontWeight='600';
+    dn.innerHTML=`<a class="lnk" href="${u}" target="_blank" rel="noopener">${path}</a>`;r.appendChild(dn);
+    const bt=document.createElement('div');bt.style.cssText='height:14px;border-radius:4px;background:var(--line-soft);position:relative;overflow:hidden';
+    bt.innerHTML=`<div style="position:absolute;inset:0 auto 0 0;border-radius:4px;background:var(--coral);width:${v/mx*100}%"></div>`;r.appendChild(bt);
+    const bv=document.createElement('div');bv.className='num-b';bv.style.cssText='font-size:12.5px;text-align:center';bv.textContent=v;r.appendChild(bv);
+    el.appendChild(r);
+  });
+})();
+
+/* ---- heatmap ---- */
+(function(){
+  const el=document.getElementById('hm');
+  let h=`<thead><tr><th scope="col">ŞİRKET</th><th scope="col" class="c">CHATGPT</th><th scope="col" class="c">GEMINI</th></tr></thead><tbody>`;
+  RD.rank.slice(0,12).forEach(r=>{
+    const cell=v=>`<td class="cv" style="background:rgba(10,160,220,${(0.05+Math.min(v/100,1)*0.35).toFixed(2)})">%${fmt(v)}</td>`;
+    h+=`<tr class="${r.b===YOU?'you':''}"><td class="nm">${fav(r.d)}${r.b}</td>${cell(r.cg)}${cell(r.gm)}</tr>`;
+  });
+  el.innerHTML=h+'</tbody>';
+})();
+
+/* ---- model barları ---- */
+(function(){
+  const el=document.getElementById('model-lines');
+  const brands=['Akfen Yenilenebilir','Enerjisa Üretim','Aydem Yenilenebilir','Zorlu Enerji','Cengiz Enerji'];
+  const models=[['ChatGPT','cg','#25347B'],['Gemini','gm','#F5A623'],['AI Overview','ao','#0AA0DC']];
+  let out='';
+  brands.forEach(b=>{const r=RD.rank.find(x=>x.b===b);if(!r)return;
+    out+=`<div class="mbrow${b===YOU?' you':''}"><div class="mbname">${b}</div>`;
+    models.forEach(([mn,k,c])=>{out+=`<div class="mbar"><span class="ml">${mn}</span><div class="mtrack"><div class="mfill" style="width:${r[k]}%;background:${c}"></div></div><span class="mv">%${fmt(r[k])}</span></div>`});
+    out+='</div>';});
+  el.innerHTML=out;
+  document.getElementById('model-lines-leg').innerHTML=models.map(([mn,,c])=>`<span><i style="background:${c}"></i>${mn}</span>`).join('');
+})();
+
+/* ---- AIO barları ---- */
+(function(){
+  const el=document.getElementById('aio-m');
+  const list=RD.rank.filter(r=>r.ao>0).sort((a,b)=>b.ao-a.ao).slice(0,10);const mx=list[0].ao;
+  list.forEach(r=>{const you=r.b===YOU;
+    const row=document.createElement('div');row.className='drow'+(you?' you':'');row.style.gridTemplateColumns='24px minmax(0,150px) 1fr 56px';
+    row.appendChild(favImg(r.d));
+    const dn=document.createElement('div');dn.className='dn';dn.textContent=r.b;row.appendChild(dn);
+    const bt=document.createElement('div');bt.style.cssText='height:14px;border-radius:4px;background:var(--line-soft);position:relative;overflow:hidden';
+    bt.innerHTML=`<div style="position:absolute;inset:0 auto 0 0;border-radius:4px;background:${you?'var(--coral)':'var(--gray-bar)'};width:${r.ao/mx*100}%"></div>`;row.appendChild(bt);
+    const bv=document.createElement('div');bv.className='num-b';bv.style.cssText='font-size:12.5px;text-align:right';bv.textContent='%'+fmt(r.ao);row.appendChild(bv);
+    el.appendChild(row);});
+})();
+</script>
+<style>
+.cl-row{padding:11px 0;border-bottom:1px solid var(--line-soft)}
+.cl-row:last-child{border-bottom:none}
+.cl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.cl-head .cn{font-size:13px;font-weight:600;color:var(--ink)}
+.cl-head .ck{font-size:11px;color:var(--ink-3);font-weight:500}
+.cl-head .cv{font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--teal)}
+.cl-row.weak .cl-head .cv{color:var(--coral-deep)}
+.cl-bar{height:10px;border-radius:99px;background:var(--line-soft);margin-top:7px;position:relative;overflow:hidden}
+.cl-bar i{position:absolute;inset:0 auto 0 0;width:0;border-radius:99px;background:var(--teal);transition:width .8s var(--ease)}
+.cl-row.weak .cl-bar i{background:var(--coral)}
+
+</style>
+<script>
+/* ---- soru modal ---- */
+function renderQ(){
+  const rows=QUESTIONS.map((o,i)=>{
+    const u=o.mu===o.mr?`<span class="pill pos">${o.mu}/${o.mr}</span>`:(o.mu/o.mr<.5?`<span class="pill zero">${o.mu}/${o.mr}</span>`:`<span class="pill n">${o.mu}/${o.mr}</span>`);
+    const src=o.src.slice(0,4).map(([d,c])=>`<span class="chip">${fav(d)}${d} <b class="n">${c}</b></span>`).join('');
+    return `<tr><td class="idx">${i+1}</td><td class="q">"${o.q}"</td><td><span class="pill c">${o.s}</span></td><td class="c"><span class="pill n">${o.mv}/${o.mr}</span></td><td class="c">${u}</td><td class="c"><span class="pill c">${o.n}</span></td><td class="src">${src}</td></tr>`;
+  }).join('');
+  document.getElementById('qbody').innerHTML=`<table class="qtbl"><thead><tr><th class="c">#</th><th>SORU</th><th>KONU</th><th class="c">ENERJİSA ADI</th><th class="c">ÜRETİM ADIYLA</th><th class="c">CITATION</th><th>ÖNE ÇIKAN KAYNAKLAR</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+const qmodal=document.getElementById('qmodal');
+function openQ(){renderQ();qmodal.classList.add('on');document.body.style.overflow='hidden'}
+function closeQ(){qmodal.classList.remove('on');document.body.style.overflow=''}
+document.querySelectorAll('.q-open,.q-open2').forEach(t=>t.addEventListener('click',e=>{e.stopPropagation();openQ()}));
+document.getElementById('qclose').addEventListener('click',closeQ);
+document.getElementById('qback').addEventListener('click',closeQ);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeQ();sheet.classList.remove('open')}});
+
+/* ---- sidenav: tıklama + scrollspy + mobil sheet ---- */
+const links=[...document.querySelectorAll('#tocLinks a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+document.getElementById('tocSheetLinks').innerHTML=document.getElementById('tocLinks').innerHTML;
+const sheet=document.getElementById('tocSheet');
+function go(e){const id=this.getAttribute('href');const t=document.querySelector(id);if(!t)return;e.preventDefault();
+  window.scrollTo({top:t.getBoundingClientRect().top+scrollY-14,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  history.replaceState(null,'',id);sheet.classList.remove('open')}
+document.querySelectorAll('#tocLinks a,#tocSheetLinks a').forEach(a=>a.addEventListener('click',go));
+function spy(){let i=0;secs.forEach((s,k)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.3)i=k});
+  if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)i=secs.length-1;
+  document.querySelectorAll('#tocLinks a,#tocSheetLinks a').forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+secs[i].id))}
+addEventListener('scroll',spy,{passive:true});spy();
+document.getElementById('tocFab').addEventListener('click',()=>sheet.classList.add('open'));
+sheet.querySelectorAll('[data-close]').forEach(e=>e.addEventListener('click',()=>sheet.classList.remove('open')));
+
+/* ---- motion ---- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('in');
+    e.target.querySelectorAll('.bf,.cl-bar i').forEach(b=>{if(b.dataset.w)b.style.width=b.dataset.w+'%'});
+    io.unobserve(e.target)}
+}),{threshold:.08});
+document.querySelectorAll('.reveal,.panel').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+
+function countUp(el){
+  const t=parseFloat(el.dataset.count);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.childNodes[0].nodeValue=fmt(t);return}
+  const t0=performance.now(),dur=1300;
+  (function tick(now){const p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);el.childNodes[0].nodeValue=fmt(t*e);if(p<1)requestAnimationFrame(tick)})(t0);
+}
+document.querySelectorAll('.kpi .v[data-count]').forEach(countUp);
+
+function ttClamp(t){
+  const r=t.getBoundingClientRect(), w=Math.min(300,innerWidth*.72), c=r.left+r.width/2;
+  let s=0; if(c-w/2<10)s=10-(c-w/2); else if(c+w/2>innerWidth-10)s=(innerWidth-10)-(c+w/2);
+  t.style.setProperty('--tts',s+'px');
+}
+document.querySelectorAll('.term').forEach(t=>{
+  t.setAttribute('tabindex','0');
+  ['mouseenter','focus'].forEach(ev=>t.addEventListener(ev,()=>ttClamp(t)));
+  t.addEventListener('click',e=>{e.stopPropagation();ttClamp(t);document.querySelectorAll('.term.open').forEach(o=>o!==t&&o.classList.remove('open'));t.classList.toggle('open')});
+});
+document.addEventListener('click',()=>document.querySelectorAll('.term.open').forEach(o=>o.classList.remove('open')));
+
+const bar=document.getElementById('bar');
+function onScroll(){const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+</script>
+</body>
+</html>

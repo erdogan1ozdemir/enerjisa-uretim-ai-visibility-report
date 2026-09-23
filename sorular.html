@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soru Seti & Cevaplar · Enerjisa Üretim AI Görünürlük Raporu</title>
+<meta name="description" content="5 marka-nötr sektör sorusunun tam listesi; her soru için model cevapları, Enerjisa mention durumu ve öne çıkan kaynaklar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2325347B'/%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%230AA0DC' stroke-width='12'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url('fonts/BricolageGrotesque-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Outfit';src:url('fonts/Outfit-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+:root{
+  --coral:#0AA0DC;--coral-tint:#E0F4FC;--coral-deep:#0078A8;
+  --teal:#25347B;--teal-deep:#141C4A;--mint:#E8F5E9;
+  --ink:#1B2552;--ink-2:#4A4A4A;--ink-3:#8A8A8A;
+  --line:#DDE3EC;--line-soft:#EEF1F6;
+  --red:#D32F2F;--red-wash:#FFCDD2;--green:#2E7D32;--green-wash:#C8E6C9;
+  --font-display:'Bricolage Grotesque','Calibri',system-ui,sans-serif;
+  --font-body:'Outfit','Calibri',system-ui,sans-serif;
+  --r-pill:999px;
+  --shadow-card:0 2px 8px rgba(27,37,82,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--ink);background:#F6F8FB;-webkit-font-smoothing:antialiased;overflow-x:clip}
+::selection{background:var(--coral);color:#fff}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{color:#fff;padding:32px 0 28px;position:relative;overflow:hidden;
+  background:radial-gradient(700px 380px at 90% -20%,rgba(10,160,220,.3),transparent 60%),linear-gradient(140deg,var(--teal-deep),var(--teal) 60%,#2A3F96)}
+header .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header .top a{color:rgba(255,255,255,.85);text-decoration:none;font-size:13px;font-weight:600}
+header .top a:hover{color:#fff}
+header .top img{height:20px;width:auto}
+header h1{font-family:var(--font-display);font-weight:800;font-size:clamp(23px,4vw,32px);color:#fff;margin-top:14px}
+header p{color:rgba(255,255,255,.85);margin-top:8px;max-width:680px;font-size:13.5px}
+.tabs{display:flex;gap:8px;margin:20px 0 0;flex-wrap:wrap}
+.tabs button{all:unset;cursor:pointer;font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:var(--r-pill);background:rgba(255,255,255,.14);color:#fff}
+.tabs button.on{background:#fff;color:var(--teal)}
+main{padding:24px 0 60px}
+.wrap.tblwrap{max-width:1200px}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:2.5px 9px;border-radius:var(--r-pill);white-space:nowrap;display:inline-block}
+.pill.m{background:var(--mint);color:var(--green)}
+.pill.z{background:#E3F0FA;color:#1565C0}
+.pill.c{background:var(--line-soft);color:var(--ink-2)}
+.pill.n{background:var(--teal);color:#fff;font-family:var(--font-display)}
+.pill.zero{background:var(--red-wash);color:var(--red);font-family:var(--font-display)}
+.pill.pos{background:var(--green-wash);color:var(--green);font-family:var(--font-display)}
+.pill.gpt{background:#E9F2EE;color:#0D6A5C}
+.pill.gem{background:#EBE9F7;color:#5147A8}
+.pill.aio{background:#FDF0E3;color:#B45309}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:500;padding:3px 9px 3px 4px;border-radius:var(--r-pill);background:var(--line-soft);color:var(--ink-2);margin:1px 3px 1px 0;white-space:nowrap}
+.chip .n{font-family:var(--font-display);font-weight:700}
+.fav{width:15px;height:15px;border-radius:4px;object-fit:contain;flex:none;background:#fff;box-shadow:0 0 0 1px rgba(27,37,82,.08);vertical-align:middle}
+.count{font-size:12.5px;color:var(--ink-3);margin:0 0 14px}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;background:#fff;border-radius:16px;box-shadow:var(--shadow-card)}
+.qtbl{width:100%;border-collapse:collapse;font-size:13px;min-width:860px}
+.qtbl thead th{position:sticky;top:0;background:#fff;z-index:2;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:left;padding:13px 12px;border-bottom:1.5px solid var(--line)}
+.qtbl th.c,.qtbl td.c{text-align:center}
+.qtbl td{padding:12px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+.qtbl tbody tr.qrow{cursor:pointer}
+.qtbl tbody tr.qrow:hover{background:#F6F8FB}
+.qtbl .idx{font-family:var(--font-display);font-weight:700;color:var(--ink-3);font-size:12px;text-align:center}
+.qtbl .q{font-weight:600;color:var(--ink);line-height:1.4;min-width:230px}
+.qtbl .q .car{display:inline-block;transition:transform .18s ease;color:var(--coral);margin-right:6px;font-size:11px}
+.qtbl tr.qrow.open .car{transform:rotate(90deg)}
+.qtbl .src{min-width:200px}
+.qtbl tr.arow{display:none}
+.qtbl tr.arow.show{display:table-row}
+.qtbl tr.arow>td{background:#FBFAF7;padding:14px 16px 18px}
+.ans{background:#fff;border:1px solid var(--line-soft);border-radius:12px;padding:13px 16px;margin-bottom:10px;font-size:13px;line-height:1.65;color:var(--ink-2)}
+.ans .ah{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.ans b{color:var(--ink)}
+.ans .more{color:var(--coral-deep);cursor:pointer;font-weight:600;font-size:12px}
+.ans mark{background:var(--coral-tint);color:var(--coral-deep);font-weight:700;padding:0 3px;border-radius:4px}
+@media(max-width:640px){.qtbl .src{white-space:nowrap;min-width:0}.qtbl .q{min-width:210px}}
+footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
+.pill.u{background:var(--coral-tint);color:var(--coral-deep);font-family:var(--font-display)}
+.ans mark.e{background:#E6E9F5;color:#25347B}
+.brandpill{display:inline-flex;background:#fff;border-radius:9px;padding:6px 11px}.brandpill img{height:20px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a href="index.html">← Rapora dön</a>
+      <span style="display:flex;gap:14px;align-items:center"><span class="brandpill"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim"></span><img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
+    </div>
+    <h1>Soru seti & cevaplar · 5 marka-nötr sektör sorusu</h1>
+    <p>Sektör Aramaları başlığında izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> (ChatGPT, Gemini ve Google AI Overview, 2 - 21 Eylül 2026) açabilirsiniz; Enerjisa Üretim mention'ları camgöbeği, Enerjisa Enerji mention'ları lacivert işaretlenmiştir. Soruların hiçbirinde şirket adı geçmemektedir.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap tblwrap">
+    <div class="count" id="count"></div>
+    <div class="tscroll"><table class="qtbl" id="tbl"></table></div>
+  </div>
+</main>
+<footer>Enerjisa Üretim AI Görünürlük Raporu · Eylül 2026 (2 - 21 Eylül) · Inbound</footer>
+
+<script src="data/questions.js?v=sep26"></script>
+<script src="data/answers.js?v=sep26"></script>
+<script>
+const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
+const AMAP={};ANSWERS.forEach(a=>{AMAP[a.id]=a.runs});
+const MON={'09':'Eyl'};
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function mdLite(s){
+  let t=esc(s);
+  t=t.replace(/\[\[?\d*\]?\]\((https?:[^)]+)\)/g,'');
+  t=t.replace(/\(\[([^\]]{1,80})\]\((https?:[^)]+)\)\)/g,'<span style="color:var(--ink-3);font-size:11.5px">($1)</span>');
+  t=t.replace(/\[([^\]]{1,80})\]\((https?:[^)]+)\)/g,'$1');
+  t=t.replace(/\*\*([^*\n]{1,120})\*\*/g,'<b>$1</b>');
+  t=t.replace(/(Enerjisa\s+(?:Enerji\s+)?Üretim)/g,'<mark>$1</mark>');
+  t=t.replace(/(Enerjisa\s+Enerji)(?!\s+Üretim)(?![^<]*<\/mark>)/g,'<mark class="e">$1</mark>');
+  t=t.replace(/\n{2,}/g,'<br><br>').replace(/\n/g,'<br>');
+  return t;
+}
+function ansBlock(run){
+  const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':(run.p==='gemini'?'<span class="pill gem">Gemini</span>':'<span class="pill aio">AI Overview</span>');
+  const d=`<span class="pill c">${+run.d.slice(8,10)} Eyl 2026</span>`;
+  const oz=run.u?`<span class="pill pos">Enerjisa Üretim ✓${run.pos&&run.p!=='google_ai_overview'?' · '+run.pos+'. sıra':''}</span>`:(run.t?'<span class="pill u">Yalnızca Enerjisa Enerji</span>':'<span class="pill c">Enerjisa yok</span>');
+  const short=run.a.length>1100;
+  const body=mdLite(short?run.a.slice(0,1100):run.a), rest=short?mdLite(run.a.slice(1100)):'';
+  return `<div class="ans"><div class="ah">${tag}${d}${oz}</div><div>${body}${short?`<span hidden>${rest}</span> <span class="more" onclick="this.previousElementSibling.hidden=false;this.remove()">… devamını göster</span>`:''}</div></div>`;
+}
+function render(){
+  const rows=QUESTIONS.map((o,i)=>{
+    const u=o.mu===o.mr?`<span class="pill pos">${o.mu}/${o.mr}</span>`:(o.mu/o.mr<.5?`<span class="pill zero">${o.mu}/${o.mr}</span>`:`<span class="pill u">${o.mu}/${o.mr}</span>`);
+    const src=o.src.slice(0,4).map(([d,c])=>`<span class="chip"><img class="fav" src="${LOGO(d)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">${d} <b class="n">${c}</b></span>`).join('');
+    return `<tr class="qrow" data-i="${i}"><td class="idx">${i+1}</td><td class="q"><span class="car">▶</span>"${o.q}"</td><td><span class="pill c">${o.s}</span></td><td class="c"><span class="pill n">${o.mv}/${o.mr}</span></td><td class="c">${u}</td><td class="c"><span class="pill c">${o.n}</span></td><td class="src">${src}</td></tr><tr class="arow" data-i="${i}"><td colspan="7"></td></tr>`;
+  }).join('');
+  document.getElementById('tbl').innerHTML=`<thead><tr><th class="c">#</th><th>Soru · tıklayın, cevaplar açılır</th><th>Konu</th><th class="c">Enerjisa adı</th><th class="c">Üretim adıyla</th><th class="c">Citation</th><th>Öne çıkan kaynaklar</th></tr></thead><tbody>${rows}</tbody>`;
+  document.getElementById('count').textContent=QUESTIONS.length+' soru · 88 cevap · satıra tıklayarak model cevaplarını açabilirsiniz';
+  document.querySelectorAll('tr.qrow').forEach(tr=>tr.addEventListener('click',()=>{
+    const i=tr.dataset.i, arow=document.querySelector(`tr.arow[data-i="${i}"]`);
+    const open=arow.classList.toggle('show');tr.classList.toggle('open',open);
+    if(open&&!arow.dataset.done){const runs=AMAP[QUESTIONS[i].id]||[];
+      arow.firstElementChild.innerHTML=runs.length?runs.map(ansBlock).join(''):'<span style="color:var(--ink-3);font-size:13px">Bu soru için cevap kaydı bulunmuyor.</span>';arow.dataset.done=1}
+  }));
+}
+render();
+</script>
+</body>
+</html>
