@@ -75,9 +75,9 @@ b,strong{font-weight:600}
 .hero-top .lt{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.85)}
 .hero-top .rt{display:flex;align-items:center;gap:14px;flex-wrap:wrap;width:auto;min-width:0;max-width:100%;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.75)}
 .hero-top .rt img{height:20px;width:auto;display:block}
-.hero h1{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.1;max-width:780px;margin-top:8px}
+.hero h1{color:#fff;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.1;max-width:none;margin-top:8px}
 .hero h1 .hl{color:var(--coral-soft)}
-.hero .lead{margin-top:14px;max-width:760px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;color:rgba(255,255,255,.92)}
+.hero .lead{margin-top:14px;max-width:none;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;color:rgba(255,255,255,.92)}
 .hero .lead b{font-weight:600;color:#fff}
 .hero .term{color:#fff;border-color:var(--coral-soft)}
 .hero .lead .q-open{border-color:var(--coral);color:#fff}
@@ -356,7 +356,7 @@ ul.bl b,ul.bl .num-b{color:var(--ink)}
 .pnote ul.bl li::before{width:5px;height:5px;left:1px;top:.62em}
 .note ul.bl{max-width:none;font-size:14px}
 .note ul.bl li{color:var(--ink)}
-.hero ul.bl{max-width:760px;margin-top:12px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;gap:7px}
+.hero ul.bl{max-width:none;margin-top:12px;font-size:clamp(14.5px,1.4vw,16.5px);font-weight:300;gap:7px}
 .hero ul.bl li{color:rgba(255,255,255,.92)}
 .hero ul.bl li::before{background:var(--coral-soft);top:.65em}
 .hero ul.bl b{font-weight:600;color:#fff}
@@ -424,9 +424,9 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
         <span class="tag">18 cevapta yalnızca Enerjisa Enerji</span>
       </div>
       <div class="kpi">
-        <div class="v">2,7</div>
+        <div class="v">2,5</div>
         <div class="k">Avg. position · ChatGPT ve Gemini'de ortalama sıra</div>
-        <span class="tag">%67'si ilk iki sırada</span>
+        <span class="tag">37 mention'ın 19'u ilk iki sırada</span>
       </div>
       <div class="kpi bad">
         <div class="v" data-count="1.5">0<small>%</small></div>
@@ -458,7 +458,8 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
       <a href="#domain"><span class="n">11</span> enerjisauretim.com.tr</a>
       <a href="#model"><span class="n">12</span> Model karşılaştırması</a>
       <a href="#aio"><span class="n">13</span> Google AI Overview</a>
-      <a href="#notlar"><span class="n">14</span> Metodoloji notları</a>
+      <a href="#firsatlar"><span class="n">14</span> Öne çıkan fırsatlar</a>
+      <a href="#notlar"><span class="n">15</span> Metodoloji notları</a>
     </div>
     <div class="foot"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim" style="height:14px"></div>
   </nav>
@@ -474,7 +475,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
         <article class="fnote">
           <span class="fc-num">Bulgu 01</span>
           <h3>Sektör sorularında üst sıralarda</h3>
-          <ul class="bl"><li>Enerjisa Üretim adıyla <span class="term" data-tip="Visibility (mention rate): şirketin, cevapların yüzde kaçında yer aldığı.">visibility</span>: <span class="num-b">%69,3</span> (57 şirket içinde 2. sıra)</li><li>Mention edildiğinde ortalama sıra <span class="num-b">2,7</span>; mention'ların %67'si ilk iki sıradadır</li><li>"En büyük özel elektrik üreticisi" sorusunda 17 cevabın <b>17</b>'sinde yer almakta, ENKA'nın ardından 2. sırada listelenmektedir</li></ul>
+          <ul class="bl"><li>Enerjisa Üretim adıyla <span class="term" data-tip="Visibility (mention rate): şirketin, cevapların yüzde kaçında yer aldığı.">visibility</span>: <span class="num-b">%69,3</span> (57 şirket içinde 2. sıra)</li><li>ChatGPT ve Gemini'de mention edildiğinde ortalama sıra <span class="num-b">2,5</span>; 37 mention'ın 19'u ilk iki sıradadır</li><li>"En büyük özel elektrik üreticisi" sorusunda 17 cevabın <b>17</b>'sinde yer almakta, ENKA'nın ardından 2. sırada listelenmektedir</li></ul>
         </article>
         <article class="fnote">
           <span class="fc-num">Bulgu 02</span>
@@ -541,7 +542,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>VISIBILITY</div><div class="mv">%69,3<small> Enerjisa Üretim adıyla</small></div><div class="md">Şirketin, cevapların yüzde kaçında geçtiği (mention rate). Enerjisa Üretim, 88 cevabın 61'inde adıyla yer almaktadır; "Enerjisa" adı 79 cevapta (%89,8) geçmektedir.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10M7 12h10M7 17h6"/></svg>MENTION</div><div class="mv">61<small> / 88 cevap</small></div><div class="md">Şirketin bir AI cevabının metninde adıyla yer alması. Kaynak linklerindeki domain adları mention sayılmamıştır.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 5 15 19 18 12 22 12"/></svg>SHARE OF VOICE</div><div class="mv">%7,8<small> 782 mention içinde</small></div><div class="md">Cevaplarda geçen tüm şirket mention'ları içinde şirketin aldığı pay. 88 cevaptaki 782 şirket mention'ının %7,8'i Enerjisa Üretim'e aittir.</div></div>
-        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>AVG POSITION</div><div class="mv">2,7<small> ChatGPT + Gemini</small></div><div class="md">Şirket mention edildiğinde cevap listesindeki ortalama sırası. 1'e yaklaştıkça şirket, modelin ilk önerisi olmaya yaklaşır. AI Overview cevaplarının çoğunda sıra değeri bulunmadığından ChatGPT ve Gemini üzerinden hesaplanır.</div></div>
+        <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>AVG POSITION</div><div class="mv">2,5<small> ChatGPT + Gemini</small></div><div class="md">Şirket mention edildiğinde cevaptaki şirketler arasındaki ortalama sırası; sıra, şirketlerin cevap metninde ilk geçtiği yere göre belirlenir. 1'e yaklaştıkça şirket, modelin ilk önerisi olmaya yaklaşır. AI Overview cevaplarının çoğunda sıra değeri bulunmadığından ChatGPT ve Gemini üzerinden hesaplanır.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>SOURCE VISIBILITY</div><div class="mv">%10,2<small> citation</small></div><div class="md">Cevabın kaynakçasında şirketin sitesinin geçtiği oran. enerjisauretim.com.tr, 88 cevabın 9'unda kaynak gösterilmiştir.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>CITATION</div><div class="mv">680<small> toplam</small></div><div class="md">Cevapta kaynak olarak gösterilen URL. Bu ölçümde 127 farklı domain'e 680 citation dağıtılmıştır; 10'u enerjisauretim.com.tr'ye gitmektedir.</div></div>
         <div class="metric reveal"><div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>SENTIMENT SCORE</div><div class="mv">53<small> / 100</small></div><div class="md">Mention'ın geçtiği bağlamın tonu: pozitif, nötr veya negatif sınıfı ve 0-100 arası skor. 50, nötr eşiktir.</div></div>
@@ -600,11 +601,11 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
       <div class="crumb"><span class="s">06</span><span>|</span><span>Soru bazında görünüm</span></div>
       <div class="accent-line"></div>
       <h2>Beş sektör sorusunda görünüm</h2>
-      <p class="lede">Enerjisa Üretim'in en güçlü olduğu soru <b>"en büyük özel elektrik üreticisi"</b> sorusudur (17/17, ortalama 2,1. sıra). En sınırlı görünüm, Enerjisa adının ağırlıkla Enerjisa Enerji üzerinden geçtiği <b>güneş</b> sorusundadır (Enerjisa Üretim adıyla 4/17).</p>
+      <p class="lede">Enerjisa Üretim'in en güçlü olduğu soru <b>"en büyük özel elektrik üreticisi"</b> sorusudur (17/17, ortalama 2,5. sıra). En sınırlı görünüm, Enerjisa adının ağırlıkla Enerjisa Enerji üzerinden geçtiği <b>güneş</b> sorusundadır (Enerjisa Üretim adıyla 4/17).</p>
       <div class="panel reveal">
         <div class="ph"><h3>Soru bazında mention, sıra ve rakipler</h3><span class="pk">5 SORU · 2 - 21 EYL 2026</span></div>
         <div class="tscroll" id="prompt-tbl"></div>
-        <div class="pnote"><ul class="bl"><li><b>Enerjisa adı</b> kolonu "Enerjisa" adının geçtiği, <b>Üretim adıyla</b> kolonu Enerjisa Üretim adının geçtiği cevap sayısını gösterir</li><li><b>Sıra</b> kolonu Enerjisa mention'larının ChatGPT ve Gemini'deki ortalama sırasıdır</li><li>Öne çıkan şirketler kolonunda sorunun cevaplarında en sık geçen dört şirket ve görünürlük oranları yer almaktadır</li></ul></div>
+        <div class="pnote"><ul class="bl"><li><b>Enerjisa adı</b> kolonu "Enerjisa" adının geçtiği, <b>Üretim adıyla</b> kolonu Enerjisa Üretim adının geçtiği cevap sayısını gösterir</li><li><b>Sıra</b> kolonu Enerjisa Üretim'in ChatGPT ve Gemini cevaplarındaki ortalama sırasıdır</li><li>Öne çıkan şirketler kolonunda sorunun cevaplarında en sık geçen dört şirket ve görünürlük oranları yer almaktadır</li></ul></div>
       </div>
       <div class="split3">
         <div class="panel reveal">
@@ -650,7 +651,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
         </div>
         <div class="txt reveal">
           <p><span class="term" data-tip="Mention: şirketin AI cevabı metninde adıyla yer alması.">Mention</span> ve <span class="term" data-tip="Source visibility: modelin cevabı yazarken o şirkete ait sayfaları kaynak gösterme oranı.">source visibility</span> iki ayrı metriktir. İlki cevabın metninde yer almayı, ikincisi cevabın kaynakçasında yer almayı gösterir.</p>
-          <ul class="bl"><li><b>Enerjisa Üretim:</b> ilk dört şirket içinde sık mention edilmekte, ancak kaynak olarak görece az okunmaktadır. Modeller Enerjisa Üretim bilgisini ağırlıkla MW100, AA, enerji portalları ve aracı kurum içeriklerinden almaktadır</li><li><b>Polat Enerji ve Aydem Yenilenebilir:</b> kendi siteleri cevapların sırasıyla %20,5 ve %17,0'ında kaynak gösterilmektedir. Polat Enerji'nin 19 citation'ının 16'sı rüzgar sorusundan gelmektedir</li><li><b>Zorlu Enerji:</b> %64,8 mention edildiği halde kendi sitesi yalnızca 2 cevapta kaynak gösterilmektedir; yüksek mention düşük kaynak payıyla birlikte görülebilmektedir</li></ul>
+          <ul class="bl"><li><b>Enerjisa Üretim:</b> source visibility (%10,2) Akfen Yenilenebilir (%9,1) ile aynı düzeydedir; Aydem Yenilenebilir (%17,0) ve Polat Enerji (%20,5) kendi siteleriyle daha sık kaynak gösterilmektedir. Modeller Enerjisa Üretim bilgisini ağırlıkla MW100, AA, enerji portalları ve aracı kurum içeriklerinden almaktadır</li><li><b>Polat Enerji ve Aydem Yenilenebilir:</b> kendi siteleri cevapların sırasıyla %20,5 ve %17,0'ında kaynak gösterilmektedir. Polat Enerji'nin 19 citation'ının 16'sı rüzgar sorusundan gelmektedir</li><li><b>Zorlu Enerji:</b> %64,8 mention edildiği halde kendi sitesi yalnızca 2 cevapta kaynak gösterilmektedir; yüksek mention düşük kaynak payıyla birlikte görülebilmektedir</li></ul>
           <p>Kaynak olarak okunmak mention'ı beraberinde getirmemektedir; ancak modelin şirkete dair rakamları hangi sayfadan aldığını belirlemektedir. Bu nedenle iki metriğin birlikte değerlendirilmesi yerinde olur.</p>
         </div>
       </div>
@@ -686,7 +687,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
             <div class="rankbars" id="rankbars"></div>
             <div style="display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-3);margin-top:4px"><span>1. sıra</span><span>7. sıra</span></div>
           </div>
-          <div class="pnote">ChatGPT ve Gemini'de Enerjisa, sıra değeri bulunan 48 mention'ın <b>%67</b>'sinde ilk iki sırada yer almaktadır (10 kez 1., 22 kez 2. sıra).</div>
+          <div class="pnote">ChatGPT ve Gemini'de Enerjisa Üretim'in adıyla geçtiği 37 cevabın <b>19</b>'unda şirket ilk iki sıradadır (10 kez 1., 9 kez 2. sıra). 3. sırada yer alınan 14 cevabın 5'inde Gemini listeyi kamu şirketi EÜAŞ ve ENKA ile, 4'ünde Zorlu Enerji ve Enerjisa Enerji ile başlatmaktadır; bu 4 cevapta Enerjisa Enerji, Enerjisa Üretim'in önünde listelenmektedir.</div>
         </div>
       </div>
       <div class="quote reveal">
@@ -833,15 +834,49 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
     </section>
 
     <!-- 14 -->
+    <section id="firsatlar">
+      <div class="crumb"><span class="s">14</span><span>|</span><span>Öne çıkan fırsatlar</span></div>
+      <div class="accent-line"></div>
+      <h2>Bulgulardan çıkan fırsat alanları</h2>
+      <p class="lede">Aşağıdaki başlıklar, modellerin Enerjisa Üretim'i hangi kaynaktan ve hangi adla okuduğuna dair bulgulara dayanmaktadır. Önceliklendirme Enerjisa Üretim ekibinin stratejik tercihleriyle birlikte güncellenebilir.</p>
+      <div class="fnotes reveal">
+        <article class="fnote">
+          <span class="fc-num">Fırsat 01 · Öncelikli</span>
+          <h3>Şirket kimliğinin iki şirketten ayrıştırılması</h3>
+          <ul class="bl"><li>İlgili bulgu: güneş ve yenilenebilir sorularında 18 cevapta yalnızca Enerjisa Enerji listelenmektedir</li><li>Sitedeki Organization schema'sında şirket adı ve santral grupları yer almakta; <b>legalName</b>, <b>alternateName</b> ve <b>parentOrganization</b> (Sabancı Holding, E.ON) alanları bulunmamaktadır</li><li>Bu alanların eklenmesi ve "Hakkımızda" metninde Enerjisa Üretim'in elektrik üretim şirketi, Enerjisa Enerji'nin dağıtım ve perakende şirketi olduğunun tek cümleyle belirtilmesi, modellerin portföyü doğru şirkete bağlamasını destekleyebilir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Fırsat 02 · Öncelikli</span>
+          <h3>Güncel kurulu güç verisinin okunan kaynaklara taşınması</h3>
+          <ul class="bl"><li>İlgili bulgu: 13 cevap 3.901 MWe, 3 cevap güncel 4.500+ MW değerini aktarmaktadır</li><li>Modeller bu soruda MW100, aa.com.tr ve enerji portallarını okumaktadır; güncel değerin bu listelerde ve basın bültenlerinde yer alması cevaplara yansıyabilir</li><li>"Bir Bakışta Enerjisa Üretim" içeriği sitede PDF olarak sunulmaktadır; aynı bilgilerin bir HTML sayfasında kısa, alıntılanabilir cümlelerle verilmesi değerlendirilebilir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Fırsat 03 · Yüksek</span>
+          <h3>Rüzgar sayfasının ChatGPT tarafında görünür olması</h3>
+          <ul class="bl"><li>İlgili bulgu: ChatGPT'nin 5 rüzgar cevabının hiçbirinde Enerjisa Üretim geçmemekte; liste rakiplerin kendi RES sayfalarından derlenmektedir</li><li><a class="lnk" href="https://www.enerjisauretim.com.tr/enerji-uretimi/ruzgar-santrallerimiz" target="_blank" rel="noopener">Rüzgar santrallerimiz</a> sayfası Gemini ve AI Overview'da 4 citation almakta, ChatGPT'de kaynak gösterilmemektedir; robots.txt AI tarayıcılarını engellememektedir</li><li>Sayfanın başına toplam RES sayısı ve kapasitesini veren bir özet paragrafı eklenmesi ve sayfanın Bing sonuçlarındaki görünümünün kontrol edilmesi değerlendirilebilir</li></ul>
+        </article>
+        <article class="fnote">
+          <span class="fc-num">Fırsat 04 · Orta</span>
+          <h3>Yatırım içeriklerinde doğru şirket bilgisi</h3>
+          <ul class="bl"><li>İlgili bulgu: 680 citation'ın 168'i aracı kurum ve yatırım platformu içeriklerine gitmektedir</li><li>Bu içerikler borsa kodu üzerinden ilerlediği için halka açık olmayan Enerjisa Üretim yerine ENJSA kodlu Enerjisa Enerji öne çıkabilmektedir</li><li>getmidas.com, a1capital.com.tr, gedik.com ve piapiri.com gibi sitelerin "yenilenebilir enerji şirketleri" içeriklerinde Enerjisa Üretim'in ayrı bir madde olarak yer alması için güncel bilgi notu paylaşılması değerlendirilebilir</li></ul>
+        </article>
+      </div>
+      <div class="note reveal">
+        <div class="nt">Sonraki adım</div>
+        <ul class="bl"><li>İlk adım olarak Fırsat 01 ve Fırsat 02 değerlendirilebilir; iki başlık da ayrışmanın ve eski rakamların yoğunlaştığı sorulara doğrudan karşılık gelmektedir</li><li>Bir sonraki ölçümde aynı 5 soru, "Enerjisa adı" ve "Enerjisa Üretim adıyla" katmanlarıyla birlikte karşılaştırılabilir</li></ul>
+      </div>
+    </section>
+
+    <!-- 15 -->
     <section id="notlar">
-      <div class="crumb"><span class="s">14</span><span>|</span><span>Metodoloji notları</span></div>
+      <div class="crumb"><span class="s">15</span><span>|</span><span>Metodoloji notları</span></div>
       <div class="accent-line"></div>
       <h2 style="font-size:clamp(20px,2vw,26px)">Metodoloji notları & sınırlamalar</h2>
       <div class="mnotes reveal">
         <div><span class="mi">A</span><span><b>Marka-nötr tasarım.</b> Sorularda şirket adı geçmez; mention tamamen modelin kendi tercihidir. Soru seti "Sektör Aramaları" başlığındaki 5 sorudan oluşmaktadır.</span></div>
         <div><span class="mi">B</span><span><b>Örneklem.</b> 5 soru × 3 model, 2 - 21 Eylül 2026 arasındaki koşular = 88 cevap. Model başına cevap sayısı farklıdır (ChatGPT 25, Gemini 32, AI Overview 31); oranlar her modelin kendi cevap sayısına göre hesaplanmıştır. Soru başına 17-19 cevap bulunduğundan yüzdeler yön gösterici olarak okunabilir.</span></div>
         <div><span class="mi">C</span><span><b>İki mention katmanı.</b> "Enerjisa adı" katmanı Enerjisa Üretim ve Enerjisa Enerji'nin birlikte sayıldığı değerdir; "Enerjisa Üretim adıyla" katmanı yalnızca Enerjisa Üretim adının geçtiği cevapları kapsar. Sıralama tablolarında iki şirket ayrı satırlarda yer almaktadır.</span></div>
-        <div><span class="mi">D</span><span><b>Entity kapsamı.</b> Cevap metni analizi en az 2 cevapta geçen 57 şirket tespit etmiştir. Avg. position ChatGPT ve Gemini cevapları üzerinden hesaplanmıştır. Türbin ve panel üreticileri sıralama dışında tutulmuş, kamu şirketi EÜAŞ sıralamaya dahil edilmiştir.</span></div>
+        <div><span class="mi">D</span><span><b>Entity kapsamı.</b> Cevap metni analizi en az 2 cevapta geçen 57 şirket tespit etmiştir. Avg. position ChatGPT ve Gemini cevaplarında, şirketlerin cevap metninde ilk geçtiği sıraya göre hesaplanmıştır. Türbin ve panel üreticileri sıralama dışında tutulmuş, kamu şirketi EÜAŞ sıralamaya dahil edilmiştir.</span></div>
         <div><span class="mi">E</span><span><b>Sentiment.</b> Mention bağlamı sınıflandırmasıdır (pozitif / nötr / negatif + 0-100 skor); "Enerjisa" adının geçtiği 79 cevap üzerinden hesaplanmıştır.</span></div>
         <div><span class="mi">F</span><span><b>Yorum.</b> AI görünürlüğü şirketin ölçeğinin değil, modellerin okuduğu kaynak ekosisteminin ölçüsüdür. Sitedeki değerler 23 Eylül 2026 tarihinde enerjisauretim.com.tr üzerinden kontrol edilmiştir.</span></div>
       </div>
@@ -1005,7 +1040,7 @@ const fav=d=>d?`<img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerr
    <text x="60" y="74" text-anchor="middle" font-size="9.5" fill="#8A8A8A" font-family="Outfit,system-ui">nötr · ${tot} mention</text>`;
   const bar=document.getElementById('sent-bar');
   [['#2E7D32',pos],['#F5A623',neu],['#D32F2F',neg]].forEach(([c,v])=>{if(!v)return;const d=document.createElement('div');d.style.width=(100*v/tot)+'%';d.style.background=c;d.title=v;bar.appendChild(d)});
-  const rb=document.getElementById('rankbars');const dist={1:10,2:22,3:5,4:2,5:4,6:2,7:3};const mx=22;
+  const rb=document.getElementById('rankbars');const dist={1:10,2:9,3:14,4:1,5:1,6:1,7:1};const mx=14;
   for(let i=1;i<=7;i++){const v=dist[i]||0;const div=document.createElement('div');div.className='rb';div.innerHTML=`<i style="height:${Math.max(4,(v/mx)*70)}px"></i><b>${v}</b>`;rb.appendChild(div)}
 })();
 

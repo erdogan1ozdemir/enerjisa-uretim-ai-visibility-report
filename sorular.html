@@ -122,7 +122,7 @@ function mdLite(s){
 function ansBlock(run){
   const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':(run.p==='gemini'?'<span class="pill gem">Gemini</span>':'<span class="pill aio">AI Overview</span>');
   const d=`<span class="pill c">${+run.d.slice(8,10)} Eyl 2026</span>`;
-  const oz=run.u?`<span class="pill pos">Enerjisa Üretim ✓${run.pos&&run.p!=='google_ai_overview'?' · '+run.pos+'. sıra':''}</span>`:(run.t?'<span class="pill u">Yalnızca Enerjisa Enerji</span>':'<span class="pill c">Enerjisa yok</span>');
+  const oz=run.u?`<span class="pill pos">Enerjisa Üretim ✓</span>`:(run.t?'<span class="pill u">Yalnızca Enerjisa Enerji</span>':'<span class="pill c">Enerjisa yok</span>');
   const short=run.a.length>1100;
   const body=mdLite(short?run.a.slice(0,1100):run.a), rest=short?mdLite(run.a.slice(1100)):'';
   return `<div class="ans"><div class="ah">${tag}${d}${oz}</div><div>${body}${short?`<span hidden>${rest}</span> <span class="more" onclick="this.previousElementSibling.hidden=false;this.remove()">… devamını göster</span>`:''}</div></div>`;

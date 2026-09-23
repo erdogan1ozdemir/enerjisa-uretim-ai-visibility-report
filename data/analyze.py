@@ -142,7 +142,7 @@ for pid, (q, key, short) in PROMPTS.items():
     prompts.append(dict(id=pid, q=q, k=key, s=short, n=len(rs),
                         tool=sum(x['tool'] for x in rs), u=sum(x['u'] for x in rs),
                         tool_vis=pct(sum(x['tool'] for x in rs), len(rs)), u_vis=pct(sum(x['u'] for x in rs), len(rs)),
-                        pos=round(statistics.mean(tp), 1) if tp else None,
+                        pos=next((r['pos'] for r in rk if r['b'] == 'Enerjisa Üretim'), None),
                         prov={PK[p]: [sum(x['tool'] for x in rs if x['prov'] == p), sum(x['u'] for x in rs if x['prov'] == p), sum(1 for x in rs if x['prov'] == p)] for p in PROV},
                         labels=dict(collections.Counter(x['label'] for x in rs if x['tool'])),
                         top=[[r['b'], r['d'], r['vis'], r['pos']] for r in rk[:8]],
