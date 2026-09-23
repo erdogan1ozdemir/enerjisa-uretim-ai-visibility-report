@@ -376,6 +376,9 @@ ul.bl b,ul.bl .num-b{color:var(--ink)}
 /* Enerjisa uyarlamaları */
 .hero-top .brandpill{display:inline-flex;align-items:center;background:#fff;border-radius:10px;padding:7px 12px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
 .hero-top .brandpill img{height:22px;width:auto;display:block}
+.hero-top .rt.agency{margin-left:auto;flex-direction:column;align-items:flex-end;gap:6px;width:auto}
+.hero-top .rt.agency img{height:22px}
+@media(max-width:520px){.hero-top .rt.agency{order:2}.hero-top .lt{order:3}.hero-top .rt.agency img{height:18px}}
 .rt .grp-tag{font-size:9.5px;font-weight:700;color:var(--teal);background:#E6E9F5;border-radius:99px;padding:1.5px 8px;margin-left:6px}
 .rt .pub-tag{font-size:9.5px;font-weight:700;color:var(--ink-2);background:var(--line-soft);border-radius:99px;padding:1.5px 8px;margin-left:6px}
 .rt tr.grp td{background:#F1F3FA}
@@ -406,8 +409,8 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
   <div class="hwrap">
     <div class="hero-top">
       <span class="brandpill"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim"></span>
-      <span class="rt">Eylül 2026 <img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
       <span class="lt">AI Görünürlük Raporu · Sektör Aramaları</span>
+      <span class="rt agency"><img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"><span>Eylül 2026</span></span>
     </div>
     <h1>Enerjisa Üretim <span class="hl">AI görünürlük</span> raporu</h1>
     <p class="lead">ChatGPT, Gemini ve Google AI Overview'a <span class="q-open" data-f="all">5 marka-nötr sektör sorusu</span> yöneltilmiş; 2 - 21 Eylül 2026 arasındaki koşularda dönen <b>88 cevabın tam metni</b> analiz edilmiştir.</p>
