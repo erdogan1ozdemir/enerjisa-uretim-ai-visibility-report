@@ -883,6 +883,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
 
 <script src="data/report_data.js?v=sep26"></script>
 <script src="data/questions.js?v=sep26"></script>
+<script src="data/tooltips.js?v=2"></script>
 <script>
 const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
 const fmt=v=>v==null?'-':v.toFixed(1).replace('.',',');
@@ -1098,6 +1099,7 @@ function renderQ(){
     return `<tr><td class="idx">${i+1}</td><td class="q">"${o.q}"</td><td><span class="pill c">${o.s}</span></td><td class="c"><span class="pill n">${o.mv}/${o.mr}</span></td><td class="c">${u}</td><td class="c"><span class="pill c">${o.n}</span></td><td class="src">${src}</td></tr>`;
   }).join('');
   document.getElementById('qbody').innerHTML=`<table class="qtbl"><thead><tr><th class="c">#</th><th>SORU</th><th>KONU</th><th class="c">ENERJİSA ADI</th><th class="c">ÜRETİM ADIYLA</th><th class="c">CITATION</th><th>ÖNE ÇIKAN KAYNAKLAR</th></tr></thead><tbody>${rows}</tbody></table>`;
+  bindMetricTips();
 }
 const qmodal=document.getElementById('qmodal');
 function openQ(){renderQ();qmodal.classList.add('on');document.body.style.overflow='hidden'}
@@ -1151,6 +1153,7 @@ document.querySelectorAll('.term').forEach(t=>{
 });
 document.addEventListener('click',()=>document.querySelectorAll('.term.open').forEach(o=>o.classList.remove('open')));
 
+bindMetricTips();
 const bar=document.getElementById('bar');
 function onScroll(){const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
