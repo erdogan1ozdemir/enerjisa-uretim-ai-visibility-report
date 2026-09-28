@@ -398,6 +398,27 @@ ul.bl b,ul.bl .num-b{color:var(--ink)}
 .u{color:var(--coral-deep)}
 a.lnk{color:var(--coral-deep);text-decoration:none;border-bottom:1px solid var(--coral-soft)}
 a.lnk:hover{border-bottom-color:var(--coral-deep)}
+.ans-open{all:unset;cursor:pointer;display:block;color:var(--ink)}
+.ans-open b{border-bottom:2px solid var(--coral-soft);transition:border-color var(--dur) var(--ease)}
+.ans-open:hover b,.ans-open:focus-visible b{border-bottom-color:var(--coral-deep)}
+.ans-open:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:4px}
+.ao-hint{display:block;margin-top:5px;font-size:11px;font-weight:600;color:var(--coral-deep)}
+.a-sub{font-size:12.5px;color:var(--ink-2);margin:8px 0 0;max-width:none}
+#abody{padding:16px 22px 22px;background:var(--bg)}
+.ans{background:#fff;border:1px solid var(--line-soft);border-radius:12px;padding:15px 18px;margin-bottom:12px;font-size:13.5px;line-height:1.7;color:var(--ink-2)}
+.ans .ah{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line-soft)}
+.ans .ad{font-size:12px;font-weight:600;color:var(--ink-3);margin-left:auto}
+.ans b{color:var(--ink)}
+.ans .src{color:var(--ink-3);font-size:11.5px}
+mark{background:var(--coral-tint);color:var(--coral-deep);font-weight:700;padding:0 3px;border-radius:4px}
+mark.e{background:#E6E9F5;color:#25347B}
+mark.lg{font-weight:600}
+.pill.gpt{background:#E6E9F5;color:#25347B}
+.pill.gem{background:#FEF3DC;color:#9A6200}
+.pill.aio{background:#E0F4FC;color:#0078A8}
+.pill.ok{background:var(--green-wash);color:var(--green)}
+.pill.warn{background:#E6E9F5;color:#25347B}
+@media(max-width:640px){#abody{padding:12px}.ans{padding:12px 13px;font-size:13px}.ans .ad{margin-left:0;flex-basis:100%}}
 @media print{#bar,.sidenav,.toc-fab,.toc-sheet,.qmodal{display:none!important}.layout{grid-template-columns:1fr}.reveal{opacity:1;transform:none}section{break-inside:avoid}}
 </style>
 </head>
@@ -603,7 +624,7 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
       <div class="panel reveal">
         <div class="ph"><h3>Soru bazında mention, sıra ve rakipler</h3><span class="pk">5 SORU · 2 - 21 EYL 2026</span></div>
         <div class="tscroll" id="prompt-tbl"></div>
-        <div class="pnote"><ul class="bl"><li><b>Enerjisa adı</b> kolonu "Enerjisa" adının geçtiği, <b>Üretim adıyla</b> kolonu Enerjisa Üretim adının geçtiği cevap sayısını gösterir</li><li><b>Sıra</b> kolonu Enerjisa Üretim'in ChatGPT ve Gemini cevaplarındaki ortalama sırasıdır</li><li>Öne çıkan şirketler kolonunda sorunun cevaplarında en sık geçen dört şirket ve görünürlük oranları yer almaktadır</li></ul></div>
+        <div class="pnote"><ul class="bl"><li>Soru metnine tıklandığında her modelin bu soruya verdiği son cevap, tarihiyle birlikte tam metin olarak açılır</li><li><b>Enerjisa adı</b> kolonu "Enerjisa" adının geçtiği, <b>Üretim adıyla</b> kolonu Enerjisa Üretim adının geçtiği cevap sayısını gösterir</li><li><b>Sıra</b> kolonu Enerjisa Üretim'in ChatGPT ve Gemini cevaplarındaki ortalama sırasıdır</li><li>Öne çıkan şirketler kolonunda sorunun cevaplarında en sık geçen dört şirket ve görünürlük oranları yer almaktadır</li></ul></div>
       </div>
       <div class="split3">
         <div class="panel reveal">
@@ -866,6 +887,22 @@ a.lnk:hover{border-bottom-color:var(--coral-deep)}
   </div>
 </footer>
 
+<!-- son cevaplar modal -->
+<div class="qmodal" id="amodal" role="dialog" aria-modal="true" aria-labelledby="aTitle">
+  <div class="backdrop" data-aclose></div>
+  <div class="qbox">
+    <div class="qhead">
+      <div class="row1">
+        <h3 id="aTitle"></h3>
+        <button class="x" data-aclose aria-label="Kapat">✕</button>
+      </div>
+      <p class="a-sub">Her model için sorunun en son koşusundaki cevap, tam metniyle gösterilmektedir. <mark class="lg">Enerjisa Üretim</mark> ve <mark class="lg e">Enerjisa Enerji</mark> geçişleri işaretlenmiştir.</p>
+      <div class="qtabs" id="atabs"></div>
+    </div>
+    <div class="qbody" id="abody"></div>
+  </div>
+</div>
+
 <!-- soru modal -->
 <div class="qmodal" id="qmodal" role="dialog" aria-modal="true" aria-label="Soru seti">
   <div class="backdrop" id="qback"></div>
@@ -925,7 +962,7 @@ const fav=d=>d?`<img class="fav sm" src="${LOGO(d)}" alt="" loading="lazy" onerr
     const u=p.u===p.n?`<span class="pos">${p.u}/${p.n}</span>`:(p.u/p.n<.5?`<span class="zero">${p.u}/${p.n}</span>`:`<span class="pos u">${p.u}/${p.n}</span>`);
     const top=p.top.filter(t=>t[0]!==YOU).slice(0,4).map(([b,d,v])=>`<span class="chip${b===GRP?' you':''}">${fav(d)}${b} <b class="n">%${Math.round(v)}</b></span>`).join('');
     const src=p.src.slice(0,3).map(([d,c])=>`<span class="chip">${fav(d)}${d} <b class="n">${c}</b></span>`).join('');
-    x+=`<tr><td style="min-width:200px"><b>${p.q}</b></td><td class="num c">${p.n}</td><td class="num c">${p.tool}/${p.n}</td><td class="c">${u}</td><td class="num c">${fmt(p.pos)}</td><td style="min-width:230px">${top}</td><td style="min-width:200px">${src}</td></tr>`;
+    x+=`<tr><td style="min-width:200px"><button class="ans-open" data-id="${p.id}" title="Son cevapları görüntüle"><b>${p.q}</b><span class="ao-hint">Son cevapları gör ↗</span></button></td><td class="num c">${p.n}</td><td class="num c">${p.tool}/${p.n}</td><td class="c">${u}</td><td class="num c">${fmt(p.pos)}</td><td style="min-width:230px">${top}</td><td style="min-width:200px">${src}</td></tr>`;
   });
   el.innerHTML=x+'</tbody></table>';
 })();
@@ -1101,6 +1138,57 @@ function renderQ(){
   document.getElementById('qbody').innerHTML=`<table class="qtbl"><thead><tr><th class="c">#</th><th>SORU</th><th>KONU</th><th class="c">ENERJİSA ADI</th><th class="c">ÜRETİM ADIYLA</th><th class="c">CITATION</th><th>ÖNE ÇIKAN KAYNAKLAR</th></tr></thead><tbody>${rows}</tbody></table>`;
   bindMetricTips();
 }
+/* ---- son cevaplar modal ---- */
+const PROV_TAG={chatgpt:'<span class="pill gpt">ChatGPT</span>',gemini:'<span class="pill gem">Gemini</span>',google_ai_overview:'<span class="pill aio">AI Overview</span>'};
+const trDate=d=>`${+d.slice(8,10)} ${['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'][+d.slice(5,7)-1]} ${d.slice(0,4)}`;
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function mdAns(s){
+  let t=escH(s);
+  t=t.replace(/\[\[?\d*\]?\]\((https?:[^)]+)\)/g,'');
+  t=t.replace(/\(\[([^\]]{1,80})\]\((https?:[^)]+)\)\)/g,'<span class="src">($1)</span>');
+  t=t.replace(/\[([^\]]{1,80})\]\((https?:[^)]+)\)/g,'$1');
+  t=t.replace(/`([^`\n]{1,80})`/g,'$1');
+  t=t.replace(/\*\*([^*\n]{1,160})\*\*/g,'<b>$1</b>');
+  t=t.replace(/(Enerjisa\s+(?:Enerji\s+)?Üretim)/g,'<mark>$1</mark>');
+  t=t.replace(/(Enerjisa\s+Enerji)(?!\s+Üretim)(?![^<]*<\/mark>)/g,'<mark class="e">$1</mark>');
+  t=t.replace(/\n{2,}/g,'<br><br>').replace(/\n/g,'<br>');
+  return t;
+}
+function loadAnswers(cb){
+  if(window.ANSWERS)return cb();
+  const sc=document.createElement('script');sc.src='data/answers.js?v=sep26';sc.onload=cb;document.body.appendChild(sc);
+}
+const amodal=document.getElementById('amodal');
+let AFOCUS=null;
+function openA(id,btn){
+  AFOCUS=btn;
+  loadAnswers(()=>{
+    const a=ANSWERS.find(x=>x.id===id);if(!a)return;
+    const last={};a.runs.forEach(r=>{if(!last[r.p]||r.d>=last[r.p].d)last[r.p]=r});
+    const runs=['chatgpt','gemini','google_ai_overview'].map(p=>last[p]).filter(Boolean);
+    document.getElementById('aTitle').textContent='"'+a.q+'"';
+    const block=r=>{
+      const st=r.u?'<span class="pill ok">Enerjisa Üretim ✓</span>':(r.t?'<span class="pill warn">Yalnızca Enerjisa Enerji</span>':'<span class="pill c">Enerjisa geçmiyor</span>');
+      return `<div class="ans" data-p="${r.p}"><div class="ah">${PROV_TAG[r.p]}${st}<span class="ad">Cevap tarihi: ${trDate(r.d)}</span></div><div>${mdAns(r.a)}</div></div>`;
+    };
+    document.getElementById('abody').innerHTML=runs.map(block).join('');
+    const tabs=document.getElementById('atabs');
+    tabs.innerHTML=`<button data-p="all" class="on">Tümü (${runs.length})</button>`+runs.map(r=>`<button data-p="${r.p}">${PROV_TAG[r.p].replace(/<[^>]+>/g,'')}</button>`).join('');
+    tabs.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
+      tabs.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+      document.querySelectorAll('#abody .ans').forEach(e=>e.style.display=(b.dataset.p==='all'||e.dataset.p===b.dataset.p)?'':'none');
+      document.getElementById('abody').scrollTop=0;
+    }));
+    amodal.classList.add('on');document.body.style.overflow='hidden';
+    document.getElementById('abody').scrollTop=0;
+    amodal.querySelector('.x').focus();
+  });
+}
+function closeA(){if(!amodal.classList.contains('on'))return;amodal.classList.remove('on');document.body.style.overflow='';if(AFOCUS)AFOCUS.focus()}
+document.querySelectorAll('.ans-open').forEach(b=>b.addEventListener('click',()=>openA(b.dataset.id,b)));
+amodal.querySelectorAll('[data-aclose]').forEach(e=>e.addEventListener('click',closeA));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeA()});
+
 const qmodal=document.getElementById('qmodal');
 function openQ(){renderQ();qmodal.classList.add('on');document.body.style.overflow='hidden'}
 function closeQ(){qmodal.classList.remove('on');document.body.style.overflow=''}
