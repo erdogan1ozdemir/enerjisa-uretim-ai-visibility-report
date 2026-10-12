@@ -6,7 +6,7 @@ ChatGPT, Gemini ve Google AI Overview'a sorulan 5 marka-nötr sektör sorusunun 
 ## Yapı
 
 ```
-index.html     → rapor (statik, bağımlılık yok)
+index.html     → rapor (statik, bağımlılık yok) · TR / EN dil düğmesi
 sorular.html   → soru seti + model cevapları
 data/
   ├─ analyze.py      (agregasyon scripti: ham DB çıktısı -> JS veri dosyaları)
@@ -28,3 +28,9 @@ fonts/         → Bricolage Grotesque + Outfit
 ## Deploy
 
 Statik site; Vercel'de framework preset **Other** yeterli.
+
+## Dil
+
+Sağ üstteki TR / EN düğmesi tüm metinleri, tabloları, grafikleri ve açıklama balonlarını çevirir; tercih tarayıcıda saklanır. `?lang=en` parametresiyle doğrudan İngilizce açılır. Model cevapları orijinal dilinde (Türkçe) gösterilir.
+
+İçerik değiştiğinde statik metinlerin `data-i` anahtarları ve `data/i18n.js` içindeki EN karşılıkları birlikte güncellenmelidir.

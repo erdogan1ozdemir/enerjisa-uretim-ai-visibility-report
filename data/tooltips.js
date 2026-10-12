@@ -62,6 +62,69 @@ const D={
     ['Citation payı','Yanıtlarda kaynak gösterilen tüm URL\'ler içinde enerjisauretim.com.tr\'nin payı.','= enerjisauretim.com.tr citation sayısı (10) / Toplam citation sayısı (680) × 100']
   ]
 };
+
+const VE=['Visibility','The share of LLM answers in which the company is named.','= Answers mentioning the company / Total answers × 100'];
+const E={
+  rank:{
+    '#':['Rank','Companies ranked by visibility; on ties, the company with the better average position is placed higher.',''],
+    'COMPANY':['Company','An electricity generation company identified in the answers. Companies appearing in at least 2 answers are listed; turbine and panel manufacturers are excluded.',''],
+    'VISIBILITY':VE,'%':VE,
+    'SOV':['Share of Voice','The company\'s share of all company mentions in the answers.','= Company mentions / Total mentions of all companies × 100'],
+    'POS':['Avg Position','The company\'s average rank among the companies in an answer when it is mentioned. Calculated on ChatGPT and Gemini answers.','= Sum of the company\'s ranks in answers / Answers mentioning the company'],
+    '1ST':['1st place','Number of answers in which the company is first in the company list (all three models).','= Answers where the company is ranked first'],
+    'GPT %':['ChatGPT visibility','The share of ChatGPT answers mentioning the company.','= ChatGPT answers mentioning the company / Total ChatGPT answers (25) × 100'],
+    'GEM %':['Gemini visibility','The share of Gemini answers mentioning the company.','= Gemini answers mentioning the company / Total Gemini answers (32) × 100'],
+    'AIO %':['AI Overview visibility','The share of Google AI Overview answers mentioning the company.','= AI Overview answers mentioning the company / Total AI Overview answers (31) × 100']
+  },
+  prompt:{
+    'QUESTION':['Question','A tracked brand-neutral question. The questions contain no company names.',''],
+    'ANSWERS':['Answers','Completed answers to the question across the three models (2 - 21 September 2026).','= ChatGPT + Gemini + AI Overview answers'],
+    'ENERJISA (ANY)':['Enerjisa (any)','Answers mentioning the "Enerjisa" name (Enerjisa Üretim or Enerjisa Enerji).','= Answers mentioning Enerjisa / Total answers to the question'],
+    'ENERJISA ÜRETIM':['By the Enerjisa Üretim name','Answers explicitly naming Enerjisa Üretim; answers mentioning only Enerjisa Enerji are excluded.','= Answers naming Enerjisa Üretim / Total answers to the question'],
+    'POS':['Avg Position','Enerjisa Üretim\'s average position in this question\'s ChatGPT and Gemini answers.','= Sum of Enerjisa Üretim\'s ranks in answers / Answers mentioning it'],
+    'TOP COMPANIES':['Top companies','The companies appearing most often in this question\'s answers; the percentage is the company\'s visibility in this question.','= Answers mentioning the company / Total answers to the question × 100'],
+    'TOP SOURCES':['Top sources','The domains cited most often in this question\'s answers; the number is the domain\'s citation count.','= Citations to the domain']
+  },
+  hm:{
+    'COMPANY':['Company','The top 12 companies by visibility.',''],
+    'CHATGPT':['ChatGPT visibility','The share of ChatGPT answers mentioning the company.','= ChatGPT answers mentioning the company / Total ChatGPT answers (25) × 100'],
+    'GEMINI':['Gemini visibility','The share of Gemini answers mentioning the company.','= Gemini answers mentioning the company / Total Gemini answers (32) × 100']
+  },
+  site:{
+    'SITE':['Site','A domain cited as a source in the answers.',''],
+    'CITATIONS':['Citations','How many times the domain is cited as a source in LLM answers (2 - 21 September 2026, three models).','= Citations to the domain']
+  },
+  fact:{
+    'REPORTED VALUE':['Reported value','A figure or statement given for the company in answers naming Enerjisa Üretim.',''],
+    'ANSWERS':['Answers','Number of answers giving this value (out of the 61 answers naming Enerjisa Üretim).','= Answers containing the value'],
+    'VALUE ON WEBSITE':['Value on website','The current value on the enerjisauretim.com.tr homepage (23 September 2026).','']
+  },
+  q:{
+    '#':['Order','Order of the questions in the list.',''],
+    'QUESTION':['Question','A tracked brand-neutral question. The questions contain no company names; they were asked in Turkish.',''],
+    'TOPIC':['Topic','The sector heading the question belongs to.',''],
+    'ENERJISA (ANY)':['Enerjisa (any)','Answers mentioning the "Enerjisa" name (Enerjisa Üretim or Enerjisa Enerji).','= Answers mentioning Enerjisa / Total answers to the question'],
+    'ENERJISA ÜRETIM':['By the Enerjisa Üretim name','Answers explicitly naming Enerjisa Üretim.','= Answers naming Enerjisa Üretim / Total answers to the question'],
+    'CITATIONS':['Citations','Total URLs cited as sources in the question\'s answers.','= Citations in the question\'s answers'],
+    'TOP SOURCES':['Top sources','The domains cited most often in this question\'s answers.','= Citations to the domain']
+  },
+  metric:[VE,
+    ['Mention','The company being named in the text of an LLM answer. Domain names in source links are not counted as mentions.','= Answers naming the company'],
+    ['Share of Voice','The company\'s share of all company mentions in the answers.','= Company mentions / Total mentions of all companies × 100'],
+    ['Avg Position','The company\'s average rank among the companies in an answer when it is mentioned (ChatGPT + Gemini).','= Sum of the company\'s ranks in answers / Answers mentioning the company'],
+    ['Source Visibility','The share of LLM answers in which the company\'s website is cited as a source (citation).','= Answers citing the company domain / Total answers × 100'],
+    ['Citation','A URL shown as a source in an LLM answer.','= URLs cited as sources in the answers'],
+    ['Sentiment','The tone of the context in which the company appears; a 0-100 score, 50 is the neutral threshold.','= Average sentiment score of answers mentioning the company'],
+    ['1st place','Number of answers in which the company is first in the company list (all three models).','= Answers where the company is ranked first']],
+  kpi:[
+    ['Visibility · by the Enerjisa Üretim name','The share of answers naming Enerjisa Üretim.','= Answers naming Enerjisa Üretim (61) / Total answers (88) × 100'],
+    ['Visibility · the "Enerjisa" name','The share of answers mentioning Enerjisa Üretim or Enerjisa Enerji.','= Answers mentioning Enerjisa (79) / Total answers (88) × 100'],
+    ['Avg Position','Enerjisa Üretim\'s average rank among the companies in an answer when it is mentioned (ChatGPT + Gemini).','= Sum of Enerjisa Üretim\'s ranks in answers / Answers mentioning it (37)'],
+    ['Citation share','enerjisauretim.com.tr\'s share of all URLs cited as sources in the answers.','= enerjisauretim.com.tr citations (10) / Total citations (680) × 100']
+  ]
+};
+Object.assign(E.q,{'Question · click to see answers':E.q['QUESTION'],'Topic':E.q['TOPIC'],'Enerjisa (any)':E.q['ENERJISA (ANY)'],'Enerjisa Üretim':E.q['ENERJISA ÜRETIM'],'Citations':E.q['CITATIONS'],'Top sources':E.q['TOP SOURCES']});
+const ORDER=['VISIBILITY','MENTION','SHARE OF VOICE','AVG POSITION','SOURCE VISIBILITY','CITATION','SENTIMENT SCORE','1. SIRA'];
 const norm=s=>s.replace(/\s+/g,' ').trim();
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const ICON='<svg class="ii" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="8" y1="7.2" x2="8" y2="11.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="4.9" r=".9" fill="currentColor"/></svg>';
@@ -78,9 +141,10 @@ function show(t){
 }
 function hide(){if(tip)tip.style.display='none'}
 function bind(node,def){
-  if(!def||node.dataset.mt)return;
+  if(!def)return;
   node.dataset.mt=JSON.stringify(def);node.classList.add('mt-on');node.tabIndex=0;
-  node.insertAdjacentHTML('beforeend',ICON);
+  if(!node.querySelector(':scope > .ii'))node.insertAdjacentHTML('beforeend',ICON);
+  if(node._mtb)return;node._mtb=1;
   node.addEventListener('mouseenter',()=>show(node));node.addEventListener('focus',()=>show(node));
   node.addEventListener('mouseleave',hide);node.addEventListener('blur',hide);
   node.addEventListener('click',e=>{e.stopPropagation();if(tip&&tip.style.display==='block'&&tip._n===node){hide();tip._n=null}else{show(node);tip._n=node}});
@@ -89,11 +153,13 @@ function heads(scope,map){
   document.querySelectorAll(scope+' th').forEach(th=>bind(th,map[norm(th.textContent)]));
 }
 window.bindMetricTips=function(){
-  heads('#rank',D.rank);heads('#prompt-tbl',D.prompt);heads('#hm',D.hm);
-  heads('#tbl-broker',D.site);heads('#tbl-comp',D.site);heads('table.fact',D.fact);
-  heads('#qbody',D.q);heads('#tbl',D.q);
-  document.querySelectorAll('.metric .mk').forEach(m=>bind(m,D.metric[norm(m.textContent)]));
-  document.querySelectorAll('.kpis .kpi .k').forEach((k,i)=>bind(k,D.kpi[i]));
+  hide();
+  const en=window.I18N&&I18N.lang==='en',X=en?E:D;
+  heads('#rank',X.rank);heads('#prompt-tbl',X.prompt);heads('#hm',X.hm);
+  heads('#tbl-broker',X.site);heads('#tbl-comp',X.site);heads('table.fact',X.fact);
+  heads('#qbody',X.q);heads('#tbl',X.q);
+  document.querySelectorAll('.metric .mk').forEach((m,i)=>bind(m,en?E.metric[i]:D.metric[ORDER[i]]));
+  document.querySelectorAll('.kpis .kpi .k').forEach((k,i)=>bind(k,X.kpi[i]));
 };
 /* sorular.html başlığı ("Soru · tıklayın, cevaplar açılır") */
 Object.assign(D.q,{'Soru · tıklayın, cevaplar açılır':D.q['SORU'],'Konu':D.q['KONU'],'Enerjisa adı':D.q['ENERJİSA ADI'],'Üretim adıyla':D.q['ÜRETİM ADIYLA'],'Citation':D.q['CITATION'],'Öne çıkan kaynaklar':D.q['ÖNE ÇIKAN KAYNAKLAR']});
