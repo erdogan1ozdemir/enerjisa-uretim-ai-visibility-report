@@ -92,7 +92,7 @@ footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
       <span style="display:flex;gap:14px;align-items:center"><span class="langsw" data-noi role="group" aria-label="Dil / Language"><button type="button" data-lang="tr" aria-pressed="true">TR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></span><span class="brandpill"><img src="assets/brand/enerjisa-uretim-logo.svg" alt="Enerjisa Üretim"></span><img src="assets/brand/inbound-wordmark-white.png" alt="Inbound"></span>
     </div>
     <h1 data-i="s001">Soru seti & cevaplar · 5 marka-nötr sektör sorusu</h1>
-    <p data-i="s002">Sektör Aramaları başlığında izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> (ChatGPT, Gemini ve Google AI Overview, 2 - 21 Eylül 2026) açabilirsiniz; Enerjisa Üretim mention'ları camgöbeği, Enerjisa Enerji mention'ları lacivert işaretlenmiştir. Soruların hiçbirinde şirket adı geçmemektedir.</p>
+    <p data-i="s002">Sektör Aramaları başlığında izlenen soruların tam listesi. Satıra tıklayarak her sorunun <b>model cevaplarını</b> (ChatGPT, Gemini ve Google AI Overview, 2 Eylül - 15 Ekim 2026) açabilirsiniz; Enerjisa Üretim mention'ları camgöbeği, Enerjisa Enerji mention'ları lacivert işaretlenmiştir. Soruların hiçbirinde şirket adı geçmemektedir.</p>
   </div>
 </header>
 <main>
@@ -101,12 +101,13 @@ footer{padding:24px 0 40px;font-size:12px;color:var(--ink-3);text-align:center}
     <div class="tscroll"><table class="qtbl" id="tbl"></table></div>
   </div>
 </main>
-<footer data-i="s003">Enerjisa Üretim AI Görünürlük Raporu · Eylül 2026 (2 - 21 Eylül) · Inbound</footer>
+<footer data-i="s003">Enerjisa Üretim AI Görünürlük Raporu · Ekim 2026 (2 Eylül - 15 Ekim) · Inbound</footer>
 
-<script src="data/i18n.js?v=1"></script>
-<script src="data/questions.js?v=sep26"></script>
-<script src="data/answers.js?v=sep26"></script>
-<script src="data/tooltips.js?v=2"></script>
+<script src="data/i18n.js?v=2"></script>
+<script src="data/questions.js?v=oct15"></script>
+<script src="data/answers.js?v=oct15"></script>
+<script src="data/answers_en.js?v=oct15"></script>
+<script src="data/tooltips.js?v=3"></script>
 <script>
 const LOGO=d=>`assets/logos/${d.split('.').join('-')}.png`;
 const AMAP={};ANSWERS.forEach(a=>{AMAP[a.id]=a.runs});
@@ -127,8 +128,9 @@ function ansBlock(run){
   const tag=run.p==='chatgpt'?'<span class="pill gpt">ChatGPT</span>':(run.p==='gemini'?'<span class="pill gem">Gemini</span>':'<span class="pill aio">AI Overview</span>');
   const d=`<span class="pill c">${I18N.date(run.d)}</span>`;
   const oz=run.u?`<span class="pill pos">Enerjisa Üretim ✓</span>`:(run.t?`<span class="pill u">${T('Yalnızca Enerjisa Enerji','Only Enerjisa Enerji')}</span>`:`<span class="pill c">${T('Enerjisa yok','No Enerjisa')}</span>`);
-  const short=run.a.length>1100;
-  const body=mdLite(short?run.a.slice(0,1100):run.a), rest=short?mdLite(run.a.slice(1100)):'';
+  const txt=I18N.lang==='en'&&typeof ANSWERS_EN!=='undefined'&&ANSWERS_EN[run.id]?ANSWERS_EN[run.id]:run.a;
+  const short=txt.length>1100;
+  const body=mdLite(short?txt.slice(0,1100):txt), rest=short?mdLite(txt.slice(1100)):'';
   return `<div class="ans"><div class="ah">${tag}${d}${oz}</div><div>${body}${short?`<span hidden>${rest}</span> <span class="more" onclick="this.previousElementSibling.hidden=false;this.remove()">${T('… devamını göster','… show more')}</span>`:''}</div></div>`;
 }
 function qtxt(o){const en=I18N.qEN(o.id);return I18N.lang==='en'&&en?`"${en}"<span class="q-orig">"${o.q}"</span>`:`"${o.q}"`}
@@ -139,7 +141,7 @@ function render(){
     return `<tr class="qrow" data-i="${i}"><td class="idx">${i+1}</td><td class="q"><span class="car">▶</span>${qtxt(o)}</td><td><span class="pill c">${I18N.s(o.s)}</span></td><td class="c"><span class="pill n">${o.mv}/${o.mr}</span></td><td class="c">${u}</td><td class="c"><span class="pill c">${o.n}</span></td><td class="src">${src}</td></tr><tr class="arow" data-i="${i}"><td colspan="7"></td></tr>`;
   }).join('');
   document.getElementById('tbl').innerHTML=`<thead><tr><th class="c">#</th><th>${T('Soru · tıklayın, cevaplar açılır','Question · click to see answers')}</th><th>${T('Konu','Topic')}</th><th class="c">${T('Enerjisa adı','Enerjisa (any)')}</th><th class="c">${T('Üretim adıyla','Enerjisa Üretim')}</th><th class="c">${T('Citation','Citations')}</th><th>${T('Öne çıkan kaynaklar','Top sources')}</th></tr></thead><tbody>${rows}</tbody>`;
-  document.getElementById('count').textContent=T(QUESTIONS.length+' soru · 88 cevap · satıra tıklayarak model cevaplarını açabilirsiniz',QUESTIONS.length+' questions · 88 answers · click a row to open the model answers (shown in Turkish, the original language)');
+  document.getElementById('count').textContent=T(QUESTIONS.length+' soru · 134 cevap · satıra tıklayarak model cevaplarını açabilirsiniz',QUESTIONS.length+' questions · 134 answers · click a row to open the model answers (translated from Turkish)');
   document.querySelectorAll('tr.qrow').forEach(tr=>tr.addEventListener('click',()=>{
     const i=tr.dataset.i, arow=document.querySelector(`tr.arow[data-i="${i}"]`);
     const open=arow.classList.toggle('show');tr.classList.toggle('open',open);

@@ -70,7 +70,7 @@ for r in M:
 
 N = len(R)
 nprov = collections.Counter(x['prov'] for x in R)
-out = {'meta': {'answers': N, 'prov_answers': dict(nprov), 'window': '2 - 21 Eylül 2026',
+out = {'meta': {'answers': N, 'prov_answers': dict(nprov), 'window': '2 Eylül - 15 Ekim 2026',
                 'dates': sorted(collections.Counter(x['ts'] for x in R).items())}}
 
 # ---------- entity sıralaması (Enerjisa aile satırı + alt kırılım) ----------
@@ -125,6 +125,11 @@ for p in PROV:
 sm = [x for x in R if x['tool']]
 k['sent'] = dict(collections.Counter(x['sent'] for x in sm))
 k['ss'] = round(statistics.mean(x['ss'] for x in sm if x['ss'] is not None), 1)
+up = [x['order'].index('Enerjisa Üretim') + 1 for x in R if x['prov'] != 'google_ai_overview' and 'Enerjisa Üretim' in x['order']]
+k['u_pos'] = round(statistics.mean(up), 2); k['u_pos_n'] = len(up); k['u_pos_dist'] = dict(sorted(collections.Counter(up).items())); k['u_top2'] = sum(1 for v in up if v <= 2)
+for p in PROV:
+    upp = [x['order'].index('Enerjisa Üretim') + 1 for x in R if x['prov'] == p and 'Enerjisa Üretim' in x['order']]
+    k['prov'][p]['u_pos'] = round(statistics.mean(upp), 2) if upp else None
 out['kpi'] = k
 
 # ---------- prompt bazında ----------
@@ -150,10 +155,11 @@ for pid, (q, key, short) in PROMPTS.items():
 out['prompts'] = prompts
 
 # ---------- haftalık seyir ----------
+import datetime as _dt
+W = ['1-7 Eyl', '8-14 Eyl', '15-21 Eyl', '22-28 Eyl', '29 Eyl-5 Eki', '6-12 Eki', '13-15 Eki']
 def week(ts):
-    d = int(ts[8:10])
-    return '1-7 Eyl' if d <= 7 else ('8-14 Eyl' if d <= 14 else '15-21 Eyl')
-W = ['1-7 Eyl', '8-14 Eyl', '15-21 Eyl']
+    d = (_dt.date.fromisoformat(ts) - _dt.date(2026, 9, 1)).days
+    return W[min(d // 7, len(W) - 1)]
 trend = []
 for w in W:
     row = {'w': w}
@@ -173,23 +179,23 @@ COMP = {'polatenerji': 'Polat Enerji', 'guris': 'Güriş', 'aydem': 'Aydem Yenil
         'zorlu': 'Zorlu Enerji', 'limak': 'Limak Enerji', 'tektug': 'Tektuğ', 'borusanenbw': 'Borusan EnBW', 'cw-enerji': 'CW Enerji',
         'kontrolmatik': 'Kontrolmatik', 'kurtsuyu': 'Kurtsuyu Elektrik', 'ozaltin': 'Özaltın Enerji', 'mogan': 'Mogan Enerji',
         'kalyon': 'Kalyon Enerji', 'alarko': 'Alarko', 'oltankoleoglu': 'Oltan & Köleoğlu', 'masfen': 'Masfen Enerji',
-        'dnzyapienerji': 'Deniz Yapı Enerji', 'demirciliruzgar': 'Demirci Rüzgar', 'icholding': 'IC Enterra', 'santralmadencilik': 'Santral Madencilik',
+        'dnzyapienerji': 'Deniz Yapı Enerji', 'demirciliruzgar': 'Demirci Rüzgar', 'icholding': 'IC Enterra', 'arsenelektrik': 'Arsen Elektrik', 'momentumenerji': 'Momentum Enerji', 'ersisenerji': 'Ersis Enerji', 'enka.com': 'ENKA', 'akenerji': 'Akenerji', 'santralmadencilik': 'Santral Madencilik',
         'eawind': 'Eawind', 'liveraenergy': 'Livera', 'goktekin': 'Göktekin', 'gmkenerji': 'GMK Enerji', 'resoltenerji': 'Resolt',
         'doganholding': 'Doğan Holding', 'asmaz': 'Asmaz', 'mimsan': 'Mimsan', 'daxler': 'Daxler'}
 BROKER = ['getmidas', 'a1capital', 'gedik', 'piapiri', 'yatirimkilavuzu', 'qnbinvest', 'gcmyatirim', 'foreks', 'hisse.net', 'investing',
-          'hocaileborsa', 'valu.com.tr', 'keremcilli']
+          'hocaileborsa', 'valu.com.tr', 'keremcilli', 'yatirimlar.com']
 SECTOR = ['enerjiatlasi', 'mw100', 'enerji-dunyasi', 'enerjigunlugu', 'tureb', 'ruzgarenerjisi', 'enerjirehberi', 'enerjigundemi',
           'enerjiekonomisi', 'radyoenerji', 'solargundem', 'gesdergisi', 'yesilekonomi', 'bestenerji', 'ceyrekmuhendis', 'piagrid',
-          'ensun', 'solarbaba', 'egirisim', 'yesilhaber', 'icci', 'turkishexporter', 'bulurum', 'revenuebase']
+          'ensun', 'solarbaba', 'egirisim', 'yesilhaber', 'icci', 'turkishexporter', 'bulurum', 'revenuebase', 'gundemenerji', 'enerjimagazin', 'iklimhaber', 'sirkulerekonomi', 'petroturk', 'stendustri', 'enerjiajansi', 'grabendata', 'mordorintelligence', 'bullfincher']
 NEWS = ['aa.com.tr', 'bloomberght', 'forbes', 'dunya.com', 'odatv', 'cumhuriyet', 'turkiyegazetesi', 'ekonomigazetesi', 'drttv',
-        'patronlardunyasi', 't24', 'ekonomim', 'hurriyet', 'businesslife', 'dha.com.tr', 'doviz', 'capital.com.tr', 'istanbul.zone']
+        'patronlardunyasi', 't24', 'ekonomim', 'hurriyet', 'businesslife', 'dha.com.tr', 'doviz', 'capital.com.tr', 'istanbul.zone', 'ntv.com.tr', 'haberturk', 'aksiyon.com.tr', 'haberekonomi', 'hakimiyet', 'ekonomiknokta', 'paraanaliz', 'shiftdelete']
 SUPPLY = ['powerenerji', 'gesenerji', 'entegro', 'yeo.com', 'gama', 'tuncmatik', 'entegresolar', 'zessolar', 'enercon', 'voith',
           'res-group', 'akfentoptan', 'kalyonholding']
 def cat(d):
     if 'enerjisauretim' in d: return 'you'
     if 'enerjisa.com' in d: return 'ejs'
     if 'wikipedia' in d: return 'wiki'
-    if d in ('instagram.com', 'facebook.com'): return 'social'
+    if d in ('instagram.com', 'facebook.com', 'youtube.com', 'tr.linkedin.com', 'linkedin.com'): return 'social'
     if d.endswith('.gov.tr'): return 'gov'
     for s in BROKER:
         if s in d: return 'broker'
@@ -227,7 +233,7 @@ for n, keys in SV.items():
     ncit = sum(1 for c in C if any(k in c['domain'] for k in keys))
     sv[n] = dict(answers=len(runs), pct=pct(len(runs), N), cit=ncit)
 out['source_vis'] = sv
-out['enerjisa_urls'] = collections.Counter((c['url'], c['llm_provider']) for c in C if 'enerjisa' in c['domain']).most_common()
+out['enerjisa_urls'] = collections.Counter((re.sub(r'[):,.]+$', '', c['url']).rstrip('/') or c['url'], c['llm_provider']) for c in C if 'enerjisa' in c['domain']).most_common()
 out['enerjisa_urls'] = [[u, p, n] for (u, p), n in out['enerjisa_urls']]
 
 # ---------- anlatı: Enerjisa bağlamındaki temalar & kurulu güç rakamları ----------
@@ -269,7 +275,7 @@ A = []
 for p in prompts:
     runs = [x for x in R if x['p'] == p['id']]
     runs.sort(key=lambda x: (x['ts'], PROV.index(x['prov'])))
-    A.append(dict(id=p['id'], q=p['q'], runs=[dict(p=x['prov'], d=x['ts'], a=x['text'], t=x['tool'], u=x['u'], pos=x['tpos'], l=x['label']) for x in runs]))
+    A.append(dict(id=p['id'], q=p['q'], runs=[dict(id=x['id'], p=x['prov'], d=x['ts'], a=x['text'], t=x['tool'], u=x['u'], pos=x['tpos'], l=x['label']) for x in runs]))
 
 OUT = sys.argv[1]
 open(OUT + '/report_data.js', 'w').write('const RD=' + json.dumps(out, ensure_ascii=False) + ';')

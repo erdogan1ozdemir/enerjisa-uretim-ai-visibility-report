@@ -38,7 +38,7 @@ ENT = [
  ("Türkerler","turkerler.com.tr", r"Türker(?:ler)?\s+(?:Yenilenebilir|Holding)"),
  ("Tatlıpınar Enerji","tatlipinarenerji.com", r"Tatlıpınar|TATEN"),
  ("Naturel Enerji","naturelenerji.com.tr", r"Naturel"),
- ("Energo-Pro","energo-pro.com.tr", r"Energo[\s-]?Pro"),
+ ("Energo-Pro","energo-pro.com.tr", r"Energo[\s-]?Pro|ENERGO[\s-]?PRO"),
  ("Merge Enerji","mergeenerji.com", r"Merge\s+Enerji"),
  ("IC Enterra","icenterra.com", r"Enterra|IC\s+İçtaş|ENTRA"),
  ("TURECO","tureco.com.tr", r"TURECO"),
@@ -64,6 +64,18 @@ ENT = [
  ("Deniz Yapı Enerji","dnzyapienerji.com.tr", r"Deniz\s+Yapı|DNZ\s+Yapı"),
  ("Power Enerji","powerenerji.com", r"Power\s+Enerji"),
  ("Demirci Rüzgar","demirciliruzgar.com", r"Demircili"),
+ ("EOLOS Rüzgar","", r"EOLOS|Eolos"),
+ ("Ersis Enerji","ersisenerji.com.tr", r"Ersis\s+Enerji"),
+ ("IBT Solar","", r"IBT\s+Solar"),
+ ("Liva Enerji","", r"Liva\s+Enerji"),
+ ("Momentum Enerji","momentumenerji.com.tr", r"Momentum\s+Enerji"),
+ ("Arsen Elektrik","arsenelektrik.com.tr", r"Arsen\s+Elektrik"),
+ ("Hun Yenilenebilir","", r"Hun\s+Yenilenebilir|HUNER"),
+ ("Göktekin Enerji","goktekinenerji.com", r"Göktekin"),
+ ("Bereket Enerji","", r"Bereket\s+Enerji"),
+ ("Shell & Turcas","", r"Shell\s*&\s*Turcas"),
+ ("TEMSAN","temsan.gov.tr", r"TEMSAN"),
+ ("Tekno Ray Solar","", r"Tekno\s+Ray"),
 ]
 # ekipman üreticileri (sıralama dışı)
-OEM = r"Vestas|Nordex|Enercon|Siemens\s+Gamesa|Goldwind|GE\s+Vernova|Jinko"
+OEM = r"Hanwha|Vestas|Nordex|Enercon|Siemens\s+Gamesa|Goldwind|GE\s+Vernova|Jinko"
